@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static custom_tags %}
+{% block title%}{{ title }}{% endblock %}
+{% block contend %}
+
+
+<div class="container text-center" style="padding-top: 120px; padding-bottom: 100px;">
+    <h1 class="">{% trans 'Search Results for' %} <span class="text-success">"{{ query }}"</span></h1>
+
+    {% if blogs %}
+    <h1>{% trans 'Blogs Pages' %}</h1>
+    <ul>
+        {% for blog in blogs %}
+        <li><a href="{% url 'blog' %}" style="text-decoration: underline !important; font-size: large;">{{ blog.title }}
+                <div class="image"><img src="{{ blog.image.url }}" style="height: 150px; width: 245px;" ></div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No results found.</p>
+    {% endif %}
+    <br>
+    {% if course %}
+    <h1>{% trans 'Course Pages' %}</h1>
+    <ul>
+        {% for course in course %}
+        <li><a href="{% url 'course-grid' %}" style="text-decoration: underline !important; font-size: large;">{{ course.title_two }}
+                <div class="image"><img src="{{ course.image.url }}" style="height: 150px; width: 245px;" ></div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No results found.</p>
+    {% endif %}
+
+</div>
+{% endblock %}

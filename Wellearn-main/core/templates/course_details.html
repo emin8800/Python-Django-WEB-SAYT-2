@@ -1,0 +1,424 @@
+{% extends 'base.html' %}
+{% load static custom_tags %}
+{% load i18n %}
+{% block title%}{{ title }}{% endblock %}
+{% block contend %}
+
+
+<!-- Page Banner Start -->
+<section class="page-banner-area rel z-1 text-white text-center"
+    style="background-image: url(static/images/banner.jpg);">
+    <div class="container">
+        <div class="banner-inner rpt-10">
+            <h2 class="page-title wow fadeInUp delay-0-2s">{% trans 'Course Details' %}</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'home' %}</a></li>
+                    <li class="breadcrumb-item active">{% trans 'Course Details' %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+    <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+</section>
+<!-- Page Banner End -->
+
+
+<!-- Course Details Start -->
+<section class="course-details-area pt-130 rpt-100">
+    <div class="container">
+        <div class="row large-gap">
+            <div class="col-lg-8">
+                <div class="course-details-content">
+                    <div class="course-header">
+                        <span class="category">{{ course.product_category }}</span>
+                        <img src="{% static 'images/shapes/line-shape.png' %}" alt="Line">
+                        <span class="off">30% off</span>
+                        <div class="ratting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(50)</span>
+                        </div>
+                    </div>
+                    <h2>{{ course.title_two }}</h2>
+                    <ul class="author-date-enroll">
+                        <li>
+                            <img src="{% static 'images/coachs/couse-author.jpg' %}" alt="Authro">
+                            <h6>Donald J. Miller</h6>
+                        </li>
+                        <li><i class="fas fa-cloud-upload-alt"></i> {% trans 'Last Update' %} {{ course.updated_at |date:"F d, Y" }}</li>
+                        <li><i class="far fa-user"></i> {% trans '25 Enrolled' %}</li>
+                    </ul>
+                    <div class="image mb-35">
+                        <img src="{{ course.image.url }}" alt="Course Details">
+                    </div>
+                    <p>{{ course.description }}</p>
+                    <h3 class="mt-40">{% trans 'Requirements' %}</h3>
+                    <ul class="list-style-two mb-45">
+                        <li>{% trans 'DevTools Debugging Tips And Shortcuts (Chrome, Firefox, Edge)' %}</li>
+                        <li>{% trans 'Front-End Performance Checklist 2021 (PDF, Apple Pages, MS Word)' %}</li>
+                        <li>{% trans 'A Smashing Guide To The World Of Search Engine Optimization' %}</li>
+                    </ul>
+                    <h3>{% trans 'Target Audience' %}</h3>
+                    <ul class="list-style-two mb-45">
+                        <li>{% trans 'Any Job Holders, Students' %}</li>
+                        <li>{% trans 'Corporate Trainer' %}</li>
+                        <li>{% trans 'Educators (Teachers, Lecturer, Faculty)' %}</li>
+                    </ul>
+                    <h3>{% trans 'Course Curriculum in Web Design' %}</h3>
+                    <div class="faq-accordion pt-10 pb-50 wow fadeInUp delay-0-2s" id="course-faq">
+                        <div class="card">
+                            <a class="card-header" href="#" data-toggle="collapse" data-target="#collapse2"
+                                aria-expanded="true" aria-controls="collapse2">{% trans 'Introduce Courses' %} <span
+                                    class="toggle-btn"></span>
+                            </a>
+                            <div id="collapse2" class="collapse show" data-parent="#course-faq">
+                                <div class="card-body">
+                                    <ul class="course-video-list">
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">{% trans 'What is Web Design ?' %}</span> 
+                                                <i class="far fa-play-circle"></i> <span class="duration">18:23</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">{% trans 'Diffent Between UX and UI Design ?' %}</span>
+                                                 <i class="far fa-play-circle"></i><span class="duration">35:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">{% trans 'Importance Of Typography ?' %}</span>
+                                                <i class="far fa-play-circle"></i> <span class="duration">120:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">{% trans 'What is Warframe ?' %}</span>
+                                                    <i class="far fa-play-circle"></i> <span class="duration">13:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a class="collapsed card-header" href="#" data-toggle="collapse" data-target="#collapse3"
+                                aria-expanded="false" aria-controls="collapse3">{% trans 'Practical Class' %} <span
+                                    class="toggle-btn"></span>
+                            </a>
+                            <div id="collapse3" class="collapse" data-parent="#course-faq">
+                                <div class="card-body">
+                                    <ul class="course-video-list">
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">What is Web
+                                                    Design ?</span> <i class="far fa-play-circle"></i> <span
+                                                    class="duration">18:23</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">Diffent Between
+                                                    UX and UI Design ?</span> <i class="far fa-play-circle"></i><span
+                                                    class="duration">35:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">Importance Of
+                                                    Typography ?</span><i class="far fa-play-circle"></i> <span
+                                                    class="duration">120:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">What is
+                                                    Warframe ?</span><i class="far fa-play-circle"></i> <span
+                                                    class="duration">13:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a class="collapsed card-header" href="#" data-toggle="collapse" data-target="#collapse4"
+                                aria-expanded="false" aria-controls="collapse4">{% trans 'Advance Project Class' %} <span
+                                    class="toggle-btn"></span>
+                            </a>
+                            <div id="collapse4" class="collapse" data-parent="#course-faq">
+                                <div class="card-body">
+                                    <ul class="course-video-list">
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">What is Web
+                                                    Design ?</span> <i class="far fa-play-circle"></i> <span
+                                                    class="duration">18:23</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">Diffent Between
+                                                    UX and UI Design ?</span> <i class="far fa-play-circle"></i><span
+                                                    class="duration">35:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">Importance Of
+                                                    Typography ?</span><i class="far fa-play-circle"></i> <span
+                                                    class="duration">120:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                                class="mfp-iframe course-video-play"><span class="title">What is
+                                                    Warframe ?</span><i class="far fa-play-circle"></i> <span
+                                                    class="duration">13:24</span> <i class="fas fa-lock"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>{% trans 'Instructors' %}</h3>
+                    <div class="course-instructor pt-10 pb-55 wow fadeInUp delay-0-2s">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <div class="instructor-image">
+                                    <img src="{% static 'images/teams/instructor.jpg' %}" alt="instructor">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="instructor-details">
+                                    <h4>John D. Mathews</h4>
+                                    <span class="designations">Senior Web Designer</span>
+                                    <div class="ratting mb-10">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(50)</span>
+                                    </div>
+                                    <p>Sit amet consectet adipising elit sed do eiusmod incididunt ut labore et dolore
+                                        magna</p>
+                                    <h5>{% trans 'Follow Me' %}</h5>
+                                    <div class="social-style-two">
+                                        <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                                        <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                                        <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>{% trans 'Student Feedback' %}</h3>
+                    <div class="student-feedback pt-10 wow fadeInUp delay-0-2s">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="student-average-feedback bg-green text-center text-white">
+                                    <b>5.0</b>
+                                    <div class="ratting mb-10">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h6>{% trans 'Total 1 Rating' %}</h6>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 align-self-center">
+                                <div class="student-feedback-details">
+                                    <div class="student-feedback-author mb-20">
+                                        <img src="{% static 'images/coachs/feedback-author.jpg' %}" alt="Authro">
+                                        <div class="content">
+                                            <h4>Lucius D. Thomas</h4>
+                                            <span class="designations">IT Students (Basic)</span>
+                                        </div>
+                                    </div>
+                                    <div class="ratting-total">
+                                        <div class="ratting-total-item">
+                                            <div class="ratting mb-10">
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <span>(5)</span>
+                                            </div>
+                                            <span class="ratting-bar">
+                                                <span style="width: 100%;"></span>
+                                            </span>
+                                            <span class="ratting-number">1 Rating</span>
+                                        </div>
+                                        <div class="ratting-total-item">
+                                            <div class="ratting mb-10">
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4)</span>
+                                            </div>
+                                            <span class="ratting-bar">
+                                                <span style="width: 0;"></span>
+                                            </span>
+                                            <span class="ratting-number">0 Rating</span>
+                                        </div>
+                                        <div class="ratting-total-item">
+                                            <div class="ratting mb-10">
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(3)</span>
+                                            </div>
+                                            <span class="ratting-bar">
+                                                <span style="width: 0;"></span>
+                                            </span>
+                                            <span class="ratting-number">0 Rating</span>
+                                        </div>
+                                        <div class="ratting-total-item">
+                                            <div class="ratting mb-10">
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(2)</span>
+                                            </div>
+                                            <span class="ratting-bar">
+                                                <span style="width: 0;"></span>
+                                            </span>
+                                            <span class="ratting-number">0 Rating</span>
+                                        </div>
+                                        <div class="ratting-total-item">
+                                            <div class="ratting mb-10">
+                                                <i class="fas fa-star selected"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(1)</span>
+                                            </div>
+                                            <span class="ratting-bar">
+                                                <span style="width: 0;"></span>
+                                            </span>
+                                            <span class="ratting-number">0 Rating</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="course-sidebar rmt-75">
+                    <div class="widget widget-course-details wow fadeInUp delay-0-2s">
+                        <div class="widget-video">
+                            <img src="{% static 'images/widgets/course-details.jpg' %}" alt="Course Details">
+                            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                                class="mfp-iframe youtube-video-play"><i class="fas fa-play"></i></a>
+                        </div>
+                        <div class="price-off">
+                            <span class="price">{{ course.Q }}</span>
+                            <span class="off">25% off</span>
+                        </div>
+                        <ul class="course-details-list mb-25">
+                            <li><i class="far fa-file-alt"></i> <span>Course Level</span> <b>{{ course.level }}</b></li>
+                            <li><i class="far fa-clock"></i> <span>Duration</span> <b>25.5 Hr</b></li>
+                            <li><i class="far fa-play-circle"></i> <span>Lectures</span> <b>9 Lectures</b></li>
+                            <li><i class="far fa-clipboard"></i> <span>Subject</span> <b>{{ course.coursecategory }}</b></li>
+                            <li><i class="fas fa-globe"></i> <span>Language</span> <b>English</b></li>
+                        </ul>
+                        <p>Sit amet consectetur adipiscin sed eiusmod tempor incidide</p>
+                        <a href="contact.html" class="theme-btn">add to cart <i class="fas fa-arrow-right"></i></a>
+                        <div class="social-style-two d-flex">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="widget widget-menu wow fadeInUp delay-0-2s">
+                        <h4 class="widget-title">Category</h4>
+                        <ul>
+                            <li><a href="course-list.html">Business Coach </a> <span>(25)</span></li>
+                            <li><a href="course-list.html">Life Coach </a> <span>(07)</span></li>
+                            <li><a href="course-list.html">Health Coach </a> <span>(12)</span></li>
+                            <li><a href="course-list.html">Web Design </a> <span>(55)</span></li>
+                            <li><a href="course-list.html">Web Development </a> <span>(14)</span></li>
+                            <li><a href="course-list.html">SEO Optimizations </a> <span>(30)</span></li>
+                            <li><a href="course-list.html">Digital Analysis </a> <span>(18)</span></li>
+                        </ul>
+                    </div>
+                    <div class="widget widget-recent-courses wow fadeInUp delay-0-2s">
+                        <h4 class="widget-title">Recent Courses</h4>
+                        <ul>
+                            
+                            {% for course in courses2 %}
+                            <li>
+                                <div class="image">
+                                    <img src="{{ course.image.url }}" alt="Course">
+                                </div>
+                                <div class="content">
+                                    <h6><a href="course-details.html">{{ course.title_two }}</a></h6>
+                                    <span>By <a href="course-grid.html">Williams</a></span>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Course Details End -->
+
+
+<!-- Recent Coach Start -->
+<section class="coach-section-two rel z-1 pt-120 rpt-90 pb-130 rpb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-8">
+                <div class="section-title text-center mb-45">
+                    <span class="sub-title-two">{% trans 'Latest Courses' %}</span>
+                    <h2>{% trans 'Browser Latest Courses' %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="coach-slider">
+            
+            {% for course in courses %}
+            <div class="coach-item style-two wow fadeInUp delay-0-2s">
+                <div class="coach-image">
+                    <img src="{{ course.image.url }}" alt="Coach">
+                </div>
+                <div class="coach-content">
+                    <a href="#" class="category">{{ course.title }}</a>
+                    <h4><a href="#">{{ course.title_two }}</a></h4>
+                    <ul class="coach-footer">
+                        <li><i class="fas fa-user-graduate"></i><span>By <b>Bennie L.</b></span></li>
+                        <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                        <li><i class="far fa-user"></i><span>seats</span></li>
+                    </ul>
+                    <div class="ratting-price">
+                        <div class="ratting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(50)</span>
+                        </div>
+                        <span class="price">{{ course.price }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           
+    </div>
+</section>
+<!-- Recent Coach End -->
+{% endblock %}

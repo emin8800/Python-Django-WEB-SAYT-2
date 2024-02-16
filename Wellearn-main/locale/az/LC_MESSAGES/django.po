@@ -1,0 +1,682 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-26 21:10+0000\n"
+"PO-Revision-Date: 2023-05-26 21:10+0000\n"
+"Last-Translator:   <admin@admin.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: core/models.py:32 core/models.py:33 core/templates/index.html:639
+msgid "Blog"
+msgstr "Bloq"
+
+#: core/models.py:110 core/models.py:111
+#: core/templates/partials/footer.html:88
+#: core/templates/partials/navbar.html:29
+#: core/templates/partials/navbar.html:85
+msgid "About"
+msgstr "Haqqımızda"
+
+#: core/models.py:153
+msgid "Product"
+msgstr "Məhsul səhifəsi"
+
+#: core/models.py:192
+msgid "Shops"
+msgstr "Mağazalar"
+
+#: core/models.py:249 core/models.py:250
+msgid "Course"
+msgstr "Kurslar"
+
+#: core/templates/about.html:17 core/templates/index.html:92
+msgid "about us"
+msgstr "Haqqımızda"
+
+#: core/templates/about.html:20 core/templates/course-grid.html:16
+#: core/templates/course_details.html:16
+msgid "home"
+msgstr "Ana Səhifə"
+
+#: core/templates/about.html:21
+msgid "About us"
+msgstr "Haqqımızda"
+
+#: core/templates/about.html:40
+msgid "About Learn Us"
+msgstr "Bizim Haqqımızda"
+
+#: core/templates/about.html:46
+msgid "Learn more"
+msgstr "Daha ətraflı öyrənin"
+
+#: core/templates/about.html:47 core/templates/index.html:146
+msgid "How it works"
+msgstr "Necə işləyir?"
+
+#: core/templates/about.html:56
+msgid "Years Of Experience"
+msgstr "Təcrübə ili"
+
+#: core/templates/about.html:65
+msgid "Enrolled Learner"
+msgstr "Qeydiyyatdan keçmiş tələbə"
+
+#: core/templates/about.html:69
+msgid "Finished Session"
+msgstr "Bitirilmiş sessiya"
+
+#: core/templates/about.html:73
+msgid "Saticfaction Rate"
+msgstr "Razıqalığı dərəcəsi"
+
+#: core/templates/about.html:77
+msgid "Awards Winning"
+msgstr "Mükafat Qazanmış"
+
+#: core/templates/about.html:91
+msgid "How About Learn Us"
+msgstr "Bizim Haqqımızda"
+
+#: core/templates/about.html:92
+msgid "Opportunity for Online Learning"
+msgstr "Onlayn Öyrənmə İmkanı"
+
+#: core/templates/about.html:100
+msgid "Experts Minds"
+msgstr "Mütəxəssislər Ağılları"
+
+#: core/templates/about.html:110
+msgid "Multiple Courses"
+msgstr "Ən son kurslar"
+
+#: core/templates/about.html:120
+msgid "Hire Quickly"
+msgstr "Tezə İşə Götür"
+
+#: core/templates/about.html:130 core/templates/index.html:136
+msgid "Video Tutorials"
+msgstr "Video Dərsliklər"
+
+#: core/templates/about.html:147
+msgid "Meet Our Team"
+msgstr "Komandamızla Tanışın"
+
+#: core/templates/about.html:148
+msgid "We’ve Thousands Of Experience Team Members"
+msgstr "Minlərlə Təcrübəli Komanda Üzvümüz var"
+
+#: core/templates/about.html:166 core/templates/about.html:200
+#: core/templates/about.html:217 core/templates/about.html:268
+msgid "Wed Designer"
+msgstr "Wed Designer"
+
+#: core/templates/about.html:183
+msgid "Wed Developer"
+msgstr "Wed Developer"
+
+#: core/templates/about.html:234
+msgid "Business Consultant"
+msgstr "Business Consultant"
+
+#: core/templates/about.html:251
+msgid "Senior Manager"
+msgstr "Senior Manager"
+
+#: core/templates/about.html:285
+msgid "Programmer"
+msgstr "Programmer"
+
+#: core/templates/about.html:302
+msgid "Become An Instructor?"
+msgstr "Təlimatçı Olmaq"
+
+#: core/templates/about.html:314
+msgid "Get Online Courses"
+msgstr "Ən Son Kurslar"
+
+#: core/templates/about.html:337
+msgid "Why Learn Us"
+msgstr "Bizim Haqqımızda"
+
+#: core/templates/about.html:338
+msgid "Exclusive Online Course Provide Categories"
+msgstr "Eksklüziv Onlayn Kurs Kateqoriyalar Təmin edir"
+
+#: core/templates/about.html:340
+msgid ""
+"On the other hand, we denounce with righteous indignation and dislike men "
+"who are so beguiled and demoralized by the charms of pleasure of the moment,"
+" so blinded by desire, that they cannot foresee the pain and trouble that "
+"are bound to ensue and equal blame belongs"
+msgstr ""
+"Digər tərəfdən, biz o anın ləzzətinin cazibəsinə aldanmış və ruhdan düşmüş, "
+"ehtirasla o qədər kor olmuş, gələcək ağrı və bəlaları qabaqcadan görə "
+"bilməyəcək qədər aldadılan və eyni günahın sahibi olan kişiləri haqlı bir "
+"qəzəb və nifrətlə qınayırıq."
+
+#: core/templates/about.html:348
+msgid "Expert Advisors"
+msgstr "Ekspert Məsləhətçilər"
+
+#: core/templates/about.html:351 core/templates/about.html:363
+#: core/templates/index.html:682
+msgid "Read more"
+msgstr "Daha ətraflı öyrənin"
+
+#: core/templates/about.html:360
+msgid "Popular Courses"
+msgstr "Kurslar"
+
+#: core/templates/about.html:393 core/templates/about.html:413
+#: core/templates/about.html:433
+msgid "Business Manager"
+msgstr "Biznes Meneceri"
+
+#: core/templates/about.html:459
+msgid "Global Partners"
+msgstr "Qlobal Tərəfdaşlar"
+
+#: core/templates/about.html:460
+msgid "We’ve More Then 235+ Global Partners"
+msgstr "235+ Qlobal Partnyorumuz var"
+
+#: core/templates/about.html:462
+msgid "View more partners"
+msgstr "Daha çox tərəfdaşa baxın"
+
+#: core/templates/course-grid.html:13 core/templates/course-grid.html:17
+msgid "Course List"
+msgstr "Kurs Siyahısı"
+
+#: core/templates/course-grid.html:41
+msgid "Category"
+msgstr "Kategoriya"
+
+#: core/templates/course-grid.html:42
+msgid "Show All Catagory"
+msgstr "Bütün Kategoriyaları Göstərin"
+
+#: core/templates/course-grid.html:51
+msgid "Filter By Times"
+msgstr "Müddətə görə Filtrləyin"
+
+#: core/templates/course-grid.html:53
+msgid "Show All Course Time"
+msgstr "Bütün Kurs Vaxtını Göstərin"
+
+#: core/templates/course-grid.html:61
+msgid "Filter By Price"
+msgstr "Qiymətət görə Filtrləyin"
+
+#: core/templates/course-grid.html:65
+msgid "Show All Courses"
+msgstr "Bütün Kursları Göstərin"
+
+#: core/templates/course-grid.html:101
+msgid "Showing <b>4</b> Courses For 15 Course"
+msgstr "15 Kurs üçün 4 Kurs Göstərilir"
+
+#: core/templates/course_details.html:13 core/templates/course_details.html:17
+msgid "Course Details"
+msgstr "Kurs Təfərrüatları"
+
+#: core/templates/course_details.html:53
+msgid "Last Update"
+msgstr "Son Dəyişiklik"
+
+#: core/templates/course_details.html:54
+msgid "25 Enrolled"
+msgstr "25 Qeydiyyatlı"
+
+#: core/templates/course_details.html:60
+msgid "Requirements"
+msgstr "Tələblər"
+
+#: core/templates/course_details.html:62
+msgid "DevTools Debugging Tips And Shortcuts (Chrome, Firefox, Edge)"
+msgstr ""
+" DevTools Xətalı Kodların Aşkarlanması üçün Ipuçları və Qısayollar (Chrome, "
+"Firefox, Edge)"
+
+#: core/templates/course_details.html:63
+msgid "Front-End Performance Checklist 2021 (PDF, Apple Pages, MS Word)"
+msgstr ""
+"2021-ci ilin FrontEnd  Performans Yoxlama Siyahısı (PDF, Apple Pages, MS "
+"Word)"
+
+#: core/templates/course_details.html:64
+msgid "A Smashing Guide To The World Of Search Engine Optimization"
+msgstr "Axtarış Mühəndisliyi Dünyasına Dair Ən Yaxşı Təlimat"
+
+#: core/templates/course_details.html:66
+msgid "Target Audience"
+msgstr "Hədəf Auditoriya"
+
+#: core/templates/course_details.html:68
+msgid "Any Job Holders, Students"
+msgstr "Hər Hansı Bir Işdə Olanlar, Tələbələr"
+
+#: core/templates/course_details.html:69
+msgid "Corporate Trainer"
+msgstr "Korporativ Təlimçi"
+
+#: core/templates/course_details.html:70
+msgid "Educators (Teachers, Lecturer, Faculty)"
+msgstr "Təhsilçilər (Müəllimlər, Lektorlar, Fakültə Üzvləri)"
+
+#: core/templates/course_details.html:72
+msgid "Course Curriculum in Web Design"
+msgstr "Veb Dizayn üzrə Kurikulum"
+
+#: core/templates/course_details.html:76
+msgid "Introduce Courses"
+msgstr "Kursların Tanıtımı"
+
+#: core/templates/course_details.html:84
+msgid "What is Web Design ?"
+msgstr "Veb Dizayn nədir?"
+
+#: core/templates/course_details.html:89
+msgid "Diffent Between UX and UI Design ?"
+msgstr "UX və UI Dizaynı arasında fərq varmı?"
+
+#: core/templates/course_details.html:94
+msgid "Importance Of Typography ?"
+msgstr "Tipoqrafiyanın əhəmiyyəti?"
+
+#: core/templates/course_details.html:99
+msgid "What is Warframe ?"
+msgstr "Warframe nədir?"
+
+#: core/templates/course_details.html:108
+msgid "Practical Class"
+msgstr "Praktik dərs"
+
+#: core/templates/course_details.html:144
+msgid "Advance Project Class"
+msgstr "İrəliləmiş Layihə Sinifi"
+
+#: core/templates/course_details.html:179
+msgid "Instructors"
+msgstr "Təlimatçılar"
+
+#: core/templates/course_details.html:201
+msgid "Follow Me"
+msgstr "Məni İzləyin"
+
+#: core/templates/course_details.html:212
+msgid "Student Feedback"
+msgstr "Tələbə Rəyi"
+
+#: core/templates/course_details.html:225
+msgid "Total 1 Rating"
+msgstr "Cəmi 1 Reytinq"
+
+#: core/templates/course_details.html:386
+msgid "Latest Courses"
+msgstr "Ən son kurslar"
+
+#: core/templates/course_details.html:387
+msgid "Browser Latest Courses"
+msgstr "Ən Son Brauzer Kursları"
+
+#: core/templates/index.html:13
+msgid "Coaching & Speker"
+msgstr "Məşqçilik və Spiker"
+
+#: core/templates/index.html:14
+msgid "Build Bright Life? Take Our Life Coach"
+msgstr "Parlaq həyat qurmaq ? Məhz bizim Həyat Məşqçimizi götürün"
+
+#: core/templates/index.html:15
+msgid ""
+"In constructing a Bright Life means to strive for personal growth and "
+"achieving goals. \"Life coach\" refers to a guide and mentor. This statement"
+" emphasizes the importance of a life coachs guidance in building a bright "
+"life."
+msgstr ""
+"\"Parlaq həyat qurmaq\" ifadəsi, öz potensialı yüksəltmək və məqsədlərə nail"
+" olmaq üçün çalışmaq deməkdir. \"Həyat meşqçisi\" isə bir rehber və mentor "
+"deməkdir. Bu ifadə, bir həyat meşqçisinin rəhbərliyinin parlaq bir həyatın "
+"əsasını təşkil etdiyini vurğulayır."
+
+#: core/templates/index.html:17
+msgid "Get Your Free Coach"
+msgstr "Pulsuz Məşqçinizi Əldə Edin"
+
+#: core/templates/index.html:29 core/templates/index.html:508
+msgid "coach"
+msgstr "Məşqçi"
+
+#: core/templates/index.html:44
+msgid "Online Courses From Experts"
+msgstr "Mütəxəssislərdən Onlayn Kurslar"
+
+#: core/templates/index.html:55
+msgid "Over 500+ High Quality Topics"
+msgstr "500-dən çox yüksək keyfiyyətli mövzu"
+
+#: core/templates/index.html:66
+msgid "Blog Details"
+msgstr "Blog Təfərrüatları"
+
+#: core/templates/index.html:67
+msgid "Event & Program Video Update"
+msgstr "Tədbir və Proqram Video Yeniləmə"
+
+#: core/templates/index.html:93
+msgid "We Provide Life Coach From Expert Advisors"
+msgstr "Biz Mütəxəssis Məsləhətçilərdən Life Coach təmin edirik"
+
+#: core/templates/index.html:103
+msgid "Exclusive Coach"
+msgstr "Eksklüziv Məşqçi"
+
+#: core/templates/index.html:104
+msgid "\"Exclusive Coach\" is a special coach for personalities and goals."
+msgstr "\"Exclusive Coach\", fərdiyyətlər və məqsədlər üzrə xüsusi məşqçidir."
+
+#: core/templates/index.html:114
+msgid "Creative Minds"
+msgstr "Yaradıcı Ağıllar"
+
+#: core/templates/index.html:115
+msgid "The term \"Creative Minds\" refers to people who think creatively."
+msgstr "\"Creative Minds\" ifadəsi, yaradıcı düşünən insanları ifadə edir."
+
+#: core/templates/index.html:125
+msgid "Master Certified"
+msgstr "Master Sertifikatlıdır"
+
+#: core/templates/index.html:126
+msgid ""
+"The expression \"Master Certified\" indicates an experienced and certified "
+"expert in the field."
+msgstr ""
+"\"Master Certified\" ifadəsi, sahəsində təcrübəli və sertifikalı bir "
+"eksperti göstərir."
+
+#: core/templates/index.html:137
+msgid ""
+"\"Video tutorials\" are instructions and learning materials in interactive "
+"video format."
+msgstr ""
+"\"Video dərsliklər\", interaktiv video formatında olan təlimatlar və öyrənmə"
+" materiallarıdır."
+
+#: core/templates/index.html:144
+msgid "Learn more us"
+msgstr "Daha ətraflı öyrənin"
+
+#: core/templates/index.html:162
+msgid "Best Solutions For Life Coach Solutions"
+msgstr "Life Coach Solutions üçün ən yaxşı həllər"
+
+#: core/templates/index.html:349
+msgid "How It Works"
+msgstr "Necə işləyir?"
+
+#: core/templates/index.html:350
+msgid "Very Simple Steps to Success Golas"
+msgstr "Uğur qazanmaq üçün çox sadə addımlar"
+
+#: core/templates/index.html:364
+msgid "Transformation Completed"
+msgstr "Transformasiya Tamamlandı"
+
+#: core/templates/index.html:371
+msgid "Schedule a Meeting"
+msgstr "Görüş Planlaşdırın"
+
+#: core/templates/index.html:378
+msgid "Make a Decision"
+msgstr "Qərara Gəlmək"
+
+#: core/templates/index.html:440
+msgid "Events & Program"
+msgstr "Tədbirlər və Proqram"
+
+#: core/templates/index.html:441
+msgid "We’reArranged Yearly Cultural Events & Program"
+msgstr "İllik Mədəni Tədbirlər və Proqram Təşkil edirik"
+
+#: core/templates/index.html:452 core/templates/index.html:462
+#: core/templates/index.html:472 core/templates/index.html:482
+#: core/templates/index.html:492 core/templates/index.html:502
+msgid "How Much Needs Life Coach For Human Beings"
+msgstr "İnsanlar üçün Həyat Təlimçisinə Nə qədər Ehtiyac Var"
+
+#: core/templates/index.html:522
+msgid "Testimonials"
+msgstr "Rəylər"
+
+#: core/templates/index.html:523
+msgid "Happy Clients Say About Coach"
+msgstr "Xoşbəxt Müştərilər Məşqçi Haqqında Deyirlər"
+
+#: core/templates/index.html:640
+msgid "Read Some Store About Blog"
+msgstr "Blog Haqqında Bəzi Mağaza Oxuyun"
+
+#: core/templates/index.html:659
+msgid "Comments (5)"
+msgstr "Şərhlər (5)"
+
+#: core/templates/index.html:692
+msgid "view more blogs"
+msgstr "daha çox bloga baxın"
+
+#: core/templates/partials/footer.html:10
+msgid "About Us"
+msgstr "Haqqımızda"
+
+#: core/templates/partials/footer.html:13
+msgid "Follow Us"
+msgstr "Məni İzləyin"
+
+#: core/templates/partials/footer.html:24
+#: core/templates/partials/navbar.html:86
+msgid "Courses"
+msgstr "Kurslar"
+
+#: core/templates/partials/footer.html:26
+msgid "Life Coach"
+msgstr "Eksklüziv Məşqçi"
+
+#: core/templates/partials/footer.html:27
+msgid "Business Coach"
+msgstr "Business Consultant"
+
+#: core/templates/partials/footer.html:28
+msgid "Health Coach"
+msgstr "Sağlamlıq Məşqçisi"
+
+#: core/templates/partials/footer.html:29
+#, fuzzy
+#| msgid "Wed Developer"
+msgid "Development"
+msgstr "Wed Developer"
+
+#: core/templates/partials/footer.html:30
+#, fuzzy
+#| msgid "Wed Designer"
+msgid "Web Design"
+msgstr "Wed Designer"
+
+#: core/templates/partials/footer.html:31
+msgid "SEO Optimize"
+msgstr "SEO Optimizasiyası"
+
+#: core/templates/partials/footer.html:37
+msgid "Resources"
+msgstr "Resurslar"
+
+#: core/templates/partials/footer.html:39
+msgid "Community"
+msgstr "Community"
+
+#: core/templates/partials/footer.html:40
+msgid "Support"
+msgstr "Dəstək"
+
+#: core/templates/partials/footer.html:41
+#, fuzzy
+#| msgid "Video Tutorials"
+msgid "Video Guides"
+msgstr "Video Dərsliklər"
+
+#: core/templates/partials/footer.html:42
+msgid "Documentation"
+msgstr "Sənədlər"
+
+#: core/templates/partials/footer.html:43
+msgid "Security"
+msgstr "Təhlükəsizlik"
+
+#: core/templates/partials/footer.html:44
+msgid "Template"
+msgstr "Şablon"
+
+#: core/templates/partials/footer.html:52
+msgid "Get In Touch"
+msgstr "Əlaqədə olmaq"
+
+#: core/templates/partials/footer.html:62
+#, fuzzy
+#| msgid "Manday - Friday"
+msgid "Sunday - Friday,"
+msgstr "Bazar ərtasi - Cümə"
+
+#: core/templates/partials/footer.html:74
+msgid "view more"
+msgstr "daha çox "
+
+#: core/templates/partials/footer.html:84
+msgid "All rights reserved."
+msgstr "Bütün hüquqlar qorunur."
+
+#: core/templates/partials/footer.html:86
+#: core/templates/partials/navbar.html:28
+msgid "Faqs"
+msgstr "Tez-tez Verilən Suallar"
+
+#: core/templates/partials/footer.html:87
+msgid "Links"
+msgstr "Bağlantılar"
+
+#: core/templates/partials/footer.html:89
+msgid "Payments"
+msgstr "Ödənişlər"
+
+#: core/templates/partials/navbar.html:17
+msgid "Working Hours"
+msgstr "Iş Saatları"
+
+#: core/templates/partials/navbar.html:17
+msgid "Manday - Friday"
+msgstr "Bazar ərtasi - Cümə"
+
+#: core/templates/partials/navbar.html:27
+msgid "Setting & Privacy"
+msgstr "Parametrlər və Məxfilik"
+
+#: core/templates/partials/navbar.html:82
+msgid "Home"
+msgstr "Ana Səhifə"
+
+#: core/templates/partials/navbar.html:91
+msgid "FAQ`s"
+msgstr "Tez-tez Verilən Suallar"
+
+#: core/templates/partials/navbar.html:92
+msgid "shop"
+msgstr "Mağaza"
+
+#: core/templates/partials/navbar.html:94
+msgid "product Page"
+msgstr "Məhsul səhifəsi"
+
+#: core/templates/partials/navbar.html:95
+msgid "product details"
+msgstr "Kurs Təfərrüatları"
+
+#: core/templates/partials/navbar.html:98
+msgid "instructors"
+msgstr "Təlimatçılar"
+
+#: core/templates/partials/navbar.html:100
+msgid "all instructors"
+msgstr "Bütün Təlimatçılar"
+
+#: core/templates/partials/navbar.html:101
+msgid "become instructor"
+msgstr "Təlimatçı Plmaq"
+
+#: core/templates/partials/navbar.html:104
+msgid "gallery"
+msgstr "Galereya"
+
+#: core/templates/partials/navbar.html:105
+msgid "pricing plan"
+msgstr "Qiymət Planı"
+
+#: core/templates/partials/navbar.html:106
+msgid "contact us"
+msgstr "Əlaqə"
+
+#: core/templates/partials/navbar.html:110
+msgid "Blogs Page"
+msgstr "Bloq Səhifəsi"
+
+#: core/templates/partials/navbar.html:113
+msgid "Logout"
+msgstr "Çıxış"
+
+#: core/templates/partials/navbar.html:115
+#: core/templates/partials/navbar.html:117
+msgid "Login"
+msgstr "Daxil ol"
+
+#: core/templates/partials/navbar.html:118
+msgid "Register"
+msgstr "Qeydiyyatdan keçən"
+
+#: core/templates/partials/navbar.html:162
+msgid "Subscribe"
+msgstr "Abunə Ol"
+
+#: core/templates/partials/navbar.html:179
+msgid "Submit now"
+msgstr "İndi Göndər"
+
+#: core/templates/search.html:9
+msgid "Search Results for"
+msgstr "Axtarış Nəticələri"
+
+#: core/templates/search.html:12
+msgid "Blogs Pages"
+msgstr "Bloq Səhifəsi"
+
+#: core/templates/search.html:26
+msgid "Course Pages"
+msgstr "Kurs Səhifələri"
+
+#~ msgid "course grid"
+#~ msgstr "kurs şəbəkəsi"
+
+#~ msgid "course timeline"
+#~ msgstr "kurs qrafiki"

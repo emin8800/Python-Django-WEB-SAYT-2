@@ -1,0 +1,349 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static custom_tags %}
+{% block title%}{{ title }}{% endblock %}
+{% block contend %}
+
+       
+        <!-- Page Banner Start -->
+        <section class="page-banner-area rel z-1 text-white text-center" style="background-image: url(static/images/banner.jpg);">
+            <div class="container">
+                <div class="banner-inner rpt-10">
+                    <h2 class="page-title wow fadeInUp delay-0-2s">Course Right Sidebar</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item active">Course Right Sidebar</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+            <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+        </section>
+        <!-- Page Banner End -->
+
+       
+        <!-- Course Left Start -->
+        <section class="course-right-area py-130 rpt-95 rpb-100">
+            <div class="container">
+                <div class="row large-gap">
+                    <div class="col-lg-8">
+                        <div class="course-timeline">
+                           <div class="shop-shorter mb-40 wow fadeInUp delay-0-2s">
+                                <div class="sort-text">
+                                    Showing <b>85</b> Courses For 505 Course
+                                </div>
+                                <ul class="grid-list">
+                                    <li><a href="#"><i class="fas fa-list-ul"></i></a></li>
+                                    <li><a href="#" class="active"><i class="fas fa-border-all"></i></a></li>
+                                </ul>
+                                <div class="products-dropdown">
+                                    <select>
+                                        <option value="default">Filter by</option>
+                                        <option value="new" selected="">Latest</option>
+                                        <option value="old">Oldest</option>
+                                        <option value="hight-to-low">High To Low</option>
+                                        <option value="low-to-high">Low To High</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="course-timeline-wrap">
+                                <div class="coach-item coach-timeline wow fadeInUp delay-0-4s">
+                                    <div class="coach-image">
+                                        <a href="course-list.html" class="category">Lifestyle</a>
+                                        <img src="{% static 'images/coachs/coach1.jpg' %}" alt="Coach">
+                                    </div>
+                                    <div class="coach-content">
+                                        <span class="label">Basic Coach</span>
+                                        <h4><a href="course-details.html">Learn How to Manage Your Lifestyle</a></h4>
+                                        <div class="ratting-price">
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(3k)</span>
+                                            </div>
+                                            <span class="price">256.95</span>
+                                        </div>
+                                        <ul class="coach-footer">
+                                            <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                                            <li><i class="far fa-user"></i><span>seats</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="coach-item coach-timeline wow fadeInUp delay-0-2s">
+                                    <div class="coach-image">
+                                        <a href="course-list.html" class="category">Web Design</a>
+                                        <img src="{% static 'images/coachs/coach2.jpg' %}" alt="Coach">
+                                    </div>
+                                    <div class="coach-content">
+                                        <span class="label">HTML CSS</span>
+                                        <h4><a href="course-details.html">How to Learn Basic Web Design HTML </a></h4>
+                                        <div class="ratting-price">
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(3k)</span>
+                                            </div>
+                                            <span class="price">256.95</span>
+                                        </div>
+                                        <ul class="coach-footer">
+                                            <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                                            <li><i class="far fa-user"></i><span>seats</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="coach-item coach-timeline wow fadeInUp delay-0-2s">
+                                    <div class="coach-image">
+                                        <a href="course-list.html" class="category">Technology</a>
+                                        <img src="{% static 'images/coachs/coach3.jpg' %}" alt="Coach">
+                                    </div>
+                                    <div class="coach-content">
+                                        <span class="label">Basic Coach</span>
+                                        <h4><a href="course-details.html">Learn How to Manage Your Lifestyle</a></h4>
+                                        <div class="ratting-price">
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(3k)</span>
+                                            </div>
+                                            <span class="price">256.95</span>
+                                        </div>
+                                        <ul class="coach-footer">
+                                            <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                                            <li><i class="far fa-user"></i><span>seats</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="coach-item coach-timeline wow fadeInUp delay-0-2s">
+                                    <div class="coach-image">
+                                        <a href="course-list.html" class="category">Photography</a>
+                                        <img src="{% static 'images/coachs/coach4.jpg' %}" alt="Coach">
+                                    </div>
+                                    <div class="coach-content">
+                                        <span class="label">Photography</span>
+                                        <h4><a href="course-details.html">Learn Photography and Video Editing Basic</a></h4>
+                                        <div class="ratting-price">
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(3k)</span>
+                                            </div>
+                                            <span class="price">256.95</span>
+                                        </div>
+                                        <ul class="coach-footer">
+                                            <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                                            <li><i class="far fa-user"></i><span>seats</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="coach-item coach-timeline wow fadeInUp delay-0-2s">
+                                    <div class="coach-image">
+                                        <a href="course-list.html" class="category">Development</a>
+                                        <img src="{% static 'images/coachs/coach5.jpg' %}" alt="Coach">
+                                    </div>
+                                    <div class="coach-content">
+                                        <span class="label">Advance</span>
+                                        <h4><a href="course-details.html">Learn How to Manage Your Lifestyle</a></h4>
+                                        <div class="ratting-price">
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(3k)</span>
+                                            </div>
+                                            <span class="price">256.95</span>
+                                        </div>
+                                        <ul class="coach-footer">
+                                            <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                                            <li><i class="far fa-user"></i><span>seats</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="coach-item coach-timeline wow fadeInUp delay-0-2s">
+                                    <div class="coach-image">
+                                        <a href="course-list.html" class="category">Marketing</a>
+                                        <img src="{% static 'images/coachs/coach6.jpg' %}" alt="Coach">
+                                    </div>
+                                    <div class="coach-content">
+                                        <span class="label">Basic Coach</span>
+                                        <h4><a href="course-details.html">Learn How to Manage Marketing Strategy</a></h4>
+                                        <div class="ratting-price">
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(3k)</span>
+                                            </div>
+                                            <span class="price">256.95</span>
+                                        </div>
+                                        <ul class="coach-footer">
+                                            <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                                            <li><i class="far fa-user"></i><span>seats</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="pagination flex-wrap mt-40">
+                                <li class="page-item disabled">
+                                    <span class="page-link"><i class="fas fa-angle-double-left"></i></span>
+                                </li>
+                                <li class="page-item active">
+                                    <span class="page-link">
+                                        01
+                                        <span class="sr-only">(current)</span>
+                                    </span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="course-sidebar rmt-75">
+                            <div class="widget widget-search wow fadeInUp delay-0-2s">
+                                <form action="#">
+                                    <input type="text" placeholder="Search Here" required>
+                                    <button type="submit" class="searchbutton fa fa-search"></button>
+                                </form>
+                            </div>
+                            <div class="widget widget-menu wow fadeInUp delay-0-4s">
+                                <h4 class="widget-title">Category</h4>
+                                <ul>
+                                    <li><a href="course-list.html">Business Coach </a> <span>(25)</span></li>
+                                    <li><a href="course-list.html">Life Coach </a> <span>(07)</span></li>
+                                    <li><a href="course-list.html">Health Coach </a> <span>(12)</span></li>
+                                    <li><a href="course-list.html">Web Design </a> <span>(55)</span></li>
+                                    <li><a href="course-list.html">Web Development </a> <span>(14)</span></li>
+                                    <li><a href="course-list.html">SEO Optimizations </a> <span>(30)</span></li>
+                                    <li><a href="course-list.html">Digital Analysis </a> <span>(18)</span></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget-menu wow fadeInUp delay-0-2s">
+                                <h4 class="widget-title">Filter By Instroctur</h4>
+                                <ul>
+                                    <li><a href="instructors.html">Jimmy T. Briley </a> <span>(8)</span></li>
+                                    <li><a href="instructors.html">Dohn E. Ingram </a> <span>(07)</span></li>
+                                    <li><a href="instructors.html">Eirk A. Buckner </a> <span>(12)</span></li>
+                                    <li><a href="instructors.html">Scott S. McGowen </a> <span>(5)</span></li>
+                                    <li><a href="instructors.html">Joseph K. Bassler </a> <span>(9)</span></li>
+                                    <li><a href="instructors.html">Robert A. Jackson </a> <span>(3)</span></li>
+                                    <li><a href="instructors.html">Joe C. McCoy </a> <span>(18)</span></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget-radio wow fadeInUp delay-0-2s">
+                                <h4 class="widget-title">Filter By Price</h4>
+                                <form class="newsletter-form" action="#">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="all-course" name="filter" checked>
+                                      <label class="custom-control-label" for="all-course">Show All Courses <span>(205)</span></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="premium-course" name="filter">
+                                      <label class="custom-control-label" for="premium-course">Premium Courses <span>(159)</span></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="free-course" name="filter">
+                                      <label class="custom-control-label" for="free-course">Free Courses <span>(65)</span></label>
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="widget widget-radio wow fadeInUp delay-0-2s">
+                                <h4 class="widget-title">Filter By Level</h4>
+                                <form class="newsletter-form" action="#">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="all-level" name="filter" checked>
+                                      <label class="custom-control-label" for="all-level">Show All Level  <span>(55)</span></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="beginner-level" name="filter">
+                                      <label class="custom-control-label" for="beginner-level">Beginner Level <span>(20)</span></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="advance-level" name="filter">
+                                      <label class="custom-control-label" for="advance-level">Advance level <span>(45)</span></label>
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="widget widget-ratting wow fadeInUp delay-0-2s">
+                                <h4 class="widget-title">Filter By Rating</h4>
+                                <ul>
+                                    <li>
+                                        <div class="ratting">
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                        </div>
+                                        <span>(35)</span>
+                                    </li>
+                                    <li>
+                                        <div class="ratting">
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span>(28)</span>
+                                    </li>
+                                    <li>
+                                        <div class="ratting">
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span>(23)</span>
+                                    </li>
+                                    <li>
+                                        <div class="ratting">
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span>(4)</span>
+                                    </li>
+                                    <li>
+                                        <div class="ratting">
+                                            <i class="fas fa-star checked"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span>(0)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Course Left End -->
+       
+        {% endblock %}

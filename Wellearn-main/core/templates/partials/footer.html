@@ -1,0 +1,100 @@
+{% load static %}
+{% load i18n %}
+
+<!-- Footer Area Start -->
+<footer class="main-footer bg-blue text-white pt-75">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-3 col-sm-4">
+                <div class="footer-widget about-widget">
+                    <h5 class="footer-title">{% trans 'About Us' %}</h5>
+                    <p>Sit amet consectetur adipiscin seeiusmod tempor incididunt ut dolore magna aliqu asusp disse
+                        ultrices gravida commodo</p>
+                    <h5 class="pt-5">{% trans 'Follow Us' %}</h5>
+                    <div class="social-style-one">
+                        <a href="{{ settings.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="{{ settings.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="{{ settings.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="{{ settings.youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="footer-widget menu-widget">
+                    <h5 class="footer-title">{% trans 'Courses' %}</h5>
+                    <ul>
+                        <li><a href="{% url 'course-grid' %}">{% trans 'Life Coach' %}</a></li>
+                        <li><a href="{% url 'course-grid' %}">{% trans 'Business Coach' %}</a></li>
+                        <li><a href="{% url 'course-grid' %}">{% trans 'Health Coach' %}</a></li>
+                        <li><a href="{% url 'course-grid' %}">{% trans 'Development' %}</a></li>
+                        <li><a href="{% url 'course-grid' %}">{% trans 'Web Design' %}</a></li>
+                        <li><a href="{% url 'course-grid' %}">{% trans 'SEO Optimize' %}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="footer-widget menu-widget">
+                    <h5 class="footer-title">{% trans 'Resources' %}</h5>
+                    <ul>
+                        <li><a href="{% url 'contact' %}">{% trans 'Community' %}</a></li>
+                        <li><a href="{% url 'contact' %}">{% trans 'Support' %}</a></li>
+                        <li><a href="{% url 'contact' %}">{% trans 'Video Guides' %}</a></li>
+                        <li><a href="{% url 'contact' %}">{% trans 'Documentation' %}</a></li>
+                        <li><a href="{% url 'contact' %}">{% trans 'Security' %}</a></li>
+                        <li><a href="{% url 'contact' %}">{% trans 'Template' %}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="footer-widget contact-info-widget">
+                            <h5 class="footer-title">{% trans 'Get In Touch' %}</h5>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> {{ settings.address }}</li>
+                                <li><i class="far fa-envelope"></i> <a
+                                        href="https://demo.webtend.net/cdn-cgi/l/email-protection#760503060619040236111b171f1a5815191b"><span
+                                            class="__cf_email__" data-cfemail="14676164647b6660547379757d783a777b79">
+                                            {{ settings.email }}</span></a>
+                                </li>
+                                <li><i class="fas fa-phone"></i> <a href="callto:+0123456789">{{ settings.number }}</a>
+                                </li>
+                                <li><i class="far fa-clock"></i> {% trans 'Sunday - Friday,' %}<br> 08 am - 05 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-widget video-widget">
+                            <p>Quis autem vel eum iure repre enderit voluptate</p>
+                            <div class="video-widget overlay my-20">
+                                <img src="{% static 'images/footer/video.jpg' %}" alt="Video">
+                                <a href="https://www.youtube.com/watch?v=zaOf8SVBPB4" class="mfp-iframe video-play"><i
+                                        class="fas fa-play"></i></a>
+                            </div>
+                            <a href="{% url 'about' %}" class="read-more">{% trans 'view more' %} <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area bg-dark-blue rel">
+        <div class="container">
+            <div class="copyright-inner">
+                <p>© 2022. <a href="index.html">Wellern</a> {% trans 'All rights reserved.' %}</p>
+                <ul class="footer-menu">
+                    <li><a href="faqs.html">{% trans 'Faqs' %}</a></li>
+                    <li><a href="{% url 'contact' %}">{% trans 'Links' %}</a></li>
+                    <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
+                    <li><a href="{% url 'contact' %}">{% trans 'Payments' %}</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span
+                class="fas fa-angle-double-up"></span></button>
+    </div>
+</footer>
+<!-- Footer Area End -->
+
+</div>

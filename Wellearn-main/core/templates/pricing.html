@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contend %}
+
+
+<!-- Page Banner Start -->
+<section class="page-banner-area rel z-1 text-white text-center"
+    style="background-image: url(static/images/banner.jpg);">
+    <div class="container">
+        <div class="banner-inner rpt-10">
+            <h2 class="page-title wow fadeInUp delay-0-2s">Pricing Plan</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">home</a></li>
+                    <li class="breadcrumb-item active">Pricing Plan</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+    <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+</section>
+<!-- Page Banner End -->
+
+
+<!-- Pricing Section Start -->
+<section class="pricing-section-two rel z-2 pt-120 rpt-90 pb-130 rpb-100">
+    <div class="container">
+        <div class="section-title text-center mb-50">
+            <span class="sub-title-two">Pricing Package</span>
+            <h2>Membership Plans</h2>
+        </div>
+        <div class="row no-gap justify-content-center">
+            <div class="col-xl-3 col-md-6">
+                <div class="pricin-item style-two wow fadeInUp delay-0-2s">
+                    <span class="popularity">popular</span>
+                    <h4>Full Free</h4>
+                    <b>Membership</b>
+                    <span class="price">0</span>
+                    <ul class="list-style-two">
+                        <li>Free Course Include</li>
+                        <li>Part Time Instructors</li>
+                        <li>Free Videos Course</li>
+                        <li>Free Access 1 Month</li>
+                    </ul>
+                    <a href="pricing.html" class="theme-btn style-two">Choose plan <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="pricin-item style-two wow fadeInUp delay-0-4s">
+                    <span class="popularity">popular</span>
+                    <h4>3 Month</h4>
+                    <b>Membership</b>
+                    <span class="price">19</span>
+                    <span class="save">Save 20%</span>
+                    <ul class="list-style-two">
+                        <li>Course Include : 5</li>
+                        <li>Full Time Instructors</li>
+                        <li>Premium Videos Course</li>
+                        <li>Pro Access 6 Month</li>
+                    </ul>
+                    <a href="pricing.html" class="theme-btn style-two">Choose plan <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="pricin-item style-two wow fadeInUp delay-0-6s">
+                    <span class="popularity">popular</span>
+                    <h4>6 Month</h4>
+                    <b>Membership</b>
+                    <span class="price">48</span>
+                    <span class="save">Save 39%</span>
+                    <ul class="list-style-two">
+                        <li>Course Include : 7</li>
+                        <li>Full Time Instructors</li>
+                        <li>Premium Videos Course</li>
+                        <li>Pro Access 1 Year</li>
+                    </ul>
+                    <a href="pricing.html" class="theme-btn style-two">Choose plan <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="pricin-item style-two wow fadeInUp delay-0-8s">
+                    <span class="popularity">popular</span>
+                    <h4>12 Month</h4>
+                    <b>Membership</b>
+                    <span class="price">98</span>
+                    <span class="save">Save 65%</span>
+                    <ul class="list-style-two">
+                        <li>Course Include : 13</li>
+                        <li>Full Time Instructors</li>
+                        <li>Premium Videos Course</li>
+                        <li>Pro Access 1 Year</li>
+                    </ul>
+                    <a href="pricing.html" class="theme-btn style-two">Choose plan <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Pricing Section End -->
+
+
+<!-- Pricing Section Start -->
+<section class="pricing-section bg-lighter rel z-2 pt-120 rpt-90 pb-100 rpb-70">
+    <div class="container">
+        <div class="section-title text-center mb-50">
+            <span class="sub-title-two">Pricing Package</span>
+            <h2>Membership Plans</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-md-6">
+                <div class="pricin-item wow fadeInUp delay-0-2s">
+                    <span class="popularity">popular</span>
+                    <div class="icon">
+                        <img src="{% static 'images/pricing/icon1.png' %}" alt="Icon">
+                    </div>
+                    <h4>Free Membership</h4>
+                    <ul class="list-style-two">
+                        <li>Free Course Include</li>
+                        <li>Part Time Instructors</li>
+                        <li>Free Videos Course</li>
+                        <li>Free Access 1 Month (Videos)</li>
+                    </ul>
+                    <span class="price">0</span>
+                    <a href="pricing.html" class="theme-btn style-two">Choose plan <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="pricin-item wow fadeInUp delay-0-4s">
+                    <span class="popularity">popular</span>
+                    <div class="icon">
+                        <img src="{% static 'images/pricing/icon2.png' %}" alt="Icon">
+                    </div>
+                    <h4>Basic Membership</h4>
+                    <ul class="list-style-two">
+                        <li>Pro Course Include : 07</li>
+                        <li>Full Time Experts Instructors</li>
+                        <li>Premium Videos Course</li>
+                        <li>Pro Access 6 Month (Videos)</li>
+                    </ul>
+                    <span class="price">39</span>
+                    <a href="pricing.html" class="theme-btn style-two">Choose plan <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="pricin-item wow fadeInUp delay-0-6s">
+                    <span class="popularity">popular</span>
+                    <div class="icon">
+                        <img src="{% static 'images/pricing/icon3.png' %}" alt="Icon">
+                    </div>
+                    <h4>Advance Membership</h4>
+                    <ul class="list-style-two">
+                        <li>Pro Course Include : 15</li>
+                        <li>Full Time Experts Instructors</li>
+                        <li>Premium Videos Course</li>
+                        <li>Pro Access 12 Month (Videos)</li>
+                    </ul>
+                    <span class="price">98</span>
+                    <a href="pricing.html" class="theme-btn style-two">Choose plan <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Pricing Section End -->
+
+
+<!-- Advertise Area Start -->
+<section class="advertise-area pt-130 rpt-100 pb-100 rpb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="advertise-item wow fadeInUp delay-0-2s">
+                    <div class="content">
+                        <h4>Become An Instructor?</h4>
+                        <p>Sit amet consectetur adipiscing sed eiusmod tempore dolore magna suspendisse</p>
+                        <a href="contact.html" class="theme-btn">Join with us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="image">
+                        <img src="{% static 'images/advertise/advertise1.png' %}" alt="Advertise">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="advertise-item bg-two wow fadeInUp delay-0-4s">
+                    <div class="content">
+                        <h4>Get Online Courses</h4>
+                        <p>Amet consectetur adipiscing sed eius tempore dolore magna suspens</p>
+                        <a href="contact.html" class="theme-btn style-two">Join with us <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="image">
+                        <img src="{% static 'images/advertise/advertise2.png' %}" alt="Advertise">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Advertise Area End -->
+
+{% endblock %}

@@ -1,0 +1,228 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static custom_tags %}
+{% block title%}{{ title }}{% endblock %}
+{% block contend %}
+
+
+
+
+<!-- Page Banner Start -->
+<section class="page-banner-area rel z-1 text-white text-center"
+    style="background-image: url(static/images/banner.jpg);">
+    <div class="container">
+        <div class="banner-inner rpt-10">
+            <h2 class="page-title wow fadeInUp delay-0-2s">Blog Standard</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                    <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                    <li class="breadcrumb-item active">Blog Standard</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+    <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+</section>
+<!-- Page Banner End -->
+<br><br>
+
+<!-- <form  action="" method="GET">
+    <div class="input-group mb-6">
+        <div class="mr-5">
+            <select style="height: 70px" name="cat">
+                
+                <option value="">Category</option>
+                {% for category in categories %}
+                <option value="{{ category.id }}" {% if category.id == category %}selected{% endif %}>{{ category.title }}</option>
+                {% endfor %}
+            </select>
+        </div> -->
+        <!-- datetime input -->
+        
+            <!-- <div style="display: inline-block;">
+                <label class="text-black"><b>Start:</b> </label>
+                <input value="{{ start_date }}" style="width: 220px; height: 70px;" type="date" name="startdate"
+                    placeholder="startdate">
+            </div>
+            <br>
+            <div style="display: inline-block;">
+                
+                    <label class="text-black"><b>End:</b> </label>
+                    <input  value="{{ end_date }}" style="width: 220px; height: 70px;" type="date" name="enddate"
+                        placeholder="enddate">
+            </div>
+        
+
+        <div style="margin-left: 50px; display: inline-block;">
+            <input value="{% if news_title %}{{ news_title }}{% endif %}" type="text" class="form-control" placeholder="Search for Blogs" name="news">
+            <div class="input-group-append" style="display: inline-block;">
+                <button class="btn btn-outline-secondary" style="display: inline-block;" type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+</form> -->
+
+<!-- Blog Standard Start -->
+<section class="blog-standard-area py-130 rpt-95 rpb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="blog-standard-wrap">
+                
+                    {% for blog in blog %}
+                    <div class="blog-standard-item wow fadeInUp delay-0-2s">
+                        <div class="image">
+                            <img src="{{ blog.image.url }}" alt="Blog">
+                            <a href="#"><i class="fas fa-share-alt"></i></a>
+                        </div>
+                        <div class="blog-standard-content">
+                            <div class="author">
+                                <img src="{% static 'images/blog/blog-standard-author1.jpg' %}" alt="Author">
+                            </div>
+                            <div class="content">
+                                <ul class="blog-standard-header">
+                                    <li><span class="name">Michael M. Morris</span></li>
+                                    <li><i class="far fa-calendar-alt"></i> <a href="{{ blog.get_absolute_url }}">{{ blog.created_at|date:"d/m/Y" }}</a></li>
+                                    <li><i class="far fa-comments"></i> <a href="{{ blog.get_absolute_url }}">Comments (05)</a>
+                                    </li>
+                                </ul>
+                                <h3><a href="{{ blog.get_absolute_url }}">{{ blog.title | title }}</a></h3>
+                                <p>{{ blog.description | truncatechars:180 | safe }}</p>
+                                <a href="{{ blog.get_absolute_url }}" target="_blank" class="theme-btn style-two">Learn more <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                    <ul class="pagination flex-wrap">
+                        {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-angle-double-left"></i></a>
+                        </li>
+                            {% endif %}
+
+
+                        <li class="page-item active">
+                            {% for i in page_obj.paginator.page_range %}
+                          {% if page_obj.number == i %}
+                           
+                        </li>
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        
+                        {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="fas fa-angle-double-right"></i></a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-sidebar rmt-75">
+                    <div class="widget widget-search wow fadeInUp delay-0-2s">
+                        <form action="#">
+                            <input type="text" placeholder="Search Here" name="blog">
+                            <button type="submit" class="searchbutton fa fa-search"></button>
+                        </form>
+                    </div>
+                    <div class="widget widget-about wow fadeInUp delay-0-4s">
+                        <div class="image">
+                            <img src="{% static 'images/widgets/about.jpg' %}" alt="Author">
+                        </div>
+                        <h4>James D. Thomas</h4>
+                        <p>Sit amet consectetur adipiscing elits do eiusmod tempor incididunt ut labore etdol magna
+                            aliquas uspensis. </p>
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="contact.html"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="widget widget-menu wow fadeInUp delay-0-2s">
+                        <h4 class="widget-title">Category</h4>
+                        <ul>
+                            <li><a href="blog.html">Business Coach </a> <span>(25)</span></li>
+                            <li><a href="blog.html">Life Coach </a> <span>(07)</span></li>
+                            <li><a href="blog.html">Health Coach </a> <span>(12)</span></li>
+                            <li><a href="blog.html">Web Design </a> <span>(55)</span></li>
+                            <li><a href="blog.html">Web Development </a> <span>(14)</span></li>
+                            <li><a href="blog.html">SEO Optimizations </a> <span>(30)</span></li>
+                            <li><a href="blog.html">Digital Analysis </a> <span>(18)</span></li>
+                        </ul>
+                    </div>
+                    <div class="widget widget-recent-courses wow fadeInUp delay-0-2s">
+                        <h4 class="widget-title">Recent Courses</h4>
+                        <ul>
+                            <li>
+                                {% for j in course1 %}
+                                <div>
+                                    <div class="image">
+                                        <img src="{{ j.image.url }}" alt="Course">
+                                    </div>
+                                    <div class="content">
+                                        <h6><a href="{% url 'course_details' %}">{{ j.title_two }}</a></h6>
+                                        <span>By <a href="course-list.html">Williams</a></span>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <img src="{% static 'images/widgets/course2.jpg' %}" alt="Course">
+                                </div>
+                                <div class="content">
+                                    <h6><a href="course-details.html">How to Learn Basic Web Development</a></h6>
+                                    <span>By <a href="course-list.html">Somalia</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <img src="{% static 'images/widgets/course3.jpg' %}" alt="Course">
+                                </div>
+                                <div class="content">
+                                    <h6><a href="course-details.html">How to Learn Basic (SEO) Marketing </a></h6>
+                                    <span>By <a href="course-list.html">Blanchard</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <img src="{% static 'images/widgets/course4.jpg' %}" alt="Course">
+                                </div>
+                                <div class="content">
+                                    <h6><a href="course-details.html">Business Strategy Managements</a></h6>
+                                    <span>By <a href="course-list.html">Johnson</a></span>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="widget widget-tag-cloud wow fadeInUp delay-0-2s">
+                        <h4 class="widget-title">Popular Tags</h4>
+                        <div class="tag-coulds">
+                            <a href="blog.html">Course</a>
+                            <a href="blog.html">Design</a>
+                            <a href="blog.html">Marketing</a>
+                            <a href="blog.html">Life Course</a>
+                            <a href="blog.html">Health Course</a>
+                            <a href="blog.html">SEO</a>
+                            <a href="blog.html">Business</a>
+                            <a href="blog.html">Graphics</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Standard End -->
+
+{% endblock %}

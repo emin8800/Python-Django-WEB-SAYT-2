@@ -1,0 +1,498 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title%}{{ title }}{% endblock %}
+{% block contend %}
+
+
+
+
+
+<!-- Page Banner Start -->
+<section class="page-banner-area rel z-1 text-white text-center"
+    style="background-image: url(static/images/banner.jpg);">
+    <div class="container">
+        <div class="banner-inner rpt-10">
+            <h2 class="page-title wow fadeInUp delay-0-2s">{% trans 'about us' %}</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'home' %}</a></li>
+                    <li class="breadcrumb-item active">{% trans 'About us' %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+    <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+</section>
+<!-- Page Banner End -->
+
+
+<!-- About Section Start -->
+<section class="about-page-section pt-120 rpt-90">
+    <div class="container">
+        <div class="row align-items-center large-gap">
+            {% for about in about %}
+            <div class="col-lg-5">
+                <div class="about-page-content wow fadeInLeft delay-0-2s">
+                    <div class="section-title mb-30">
+                        <span class="sub-title-two">{% trans 'About Learn Us' %}</span>
+                        <h2>{{ about.title | title }}</h2>
+                    </div>
+                    <p>{{ about.description  | safe }}</p>
+                    
+                    <div class="about-btns pt-25">
+                        <a href="{% url 'course-grid' %}" target="_blank" class="theme-btn my-15">{% trans 'Learn more' %} <i class="fas fa-arrow-right"></i></a>
+                        <a href="{% url 'faqs' %}" target="_blank" class="read-more">{% trans 'How it works' %}<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="about-page-middle rpt-55 rpb-30 wow fadeInRight delay-0-2s">
+                    <img src="{{ about.image.url }}" alt="About">
+                    <div class="circle-content">
+                        <b>25</b>
+                        <span>{% trans 'Years Of Experience' %}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-2">
+                <div class="counter-wrap style-two wow fadeInRight delay-0-4s">
+                    <div class="success-item">
+                        <span class="count-text plus" data-speed="3000" data-stop="256">0</span>
+                        <span>{% trans 'Enrolled Learner' %}</span>
+                    </div>
+                    <div class="success-item">
+                        <span class="count-text plus" data-speed="3000" data-stop="2.36">0</span>
+                        <span>{% trans 'Finished Session' %}</span>
+                    </div>
+                    <div class="success-item">
+                        <span class="count-text percent" data-speed="3000" data-stop="99">0</span>
+                        <span>{% trans 'Saticfaction Rate' %}</span>
+                    </div>
+                    <div class="success-item">
+                        <span class="count-text plus" data-speed="3000" data-stop="83">0</span>
+                        <span>{% trans 'Awards Winning' %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+
+<!-- Features Section Start -->
+<section class="features-section-three rel z-1 pt-110 rpt-85 pb-100 rpb-70">
+    <div class="container">
+        <div class="section-title text-center mb-55">
+            <span class="sub-title-two">{% trans 'How About Learn Us' %}</span>
+            <h2>{% trans 'Opportunity for Online Learning' %}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-three-item wow fadeInUp delay-0-2s">
+                    <div class="icon">
+                        <i class="flaticon-reading-book"></i>
+                    </div>
+                    <h4>{% trans 'Experts Minds' %}</h4>
+                    <p>Sed ut persiciatis omnis natus voluptate accsantie doloreue laudantium</p>
+                    <a href="about.html" class="details-btn"><i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-three-item wow fadeInUp delay-0-4s">
+                    <div class="icon">
+                        <img src="{% static 'images/features/icon7.png' %}" alt="Icon">
+                    </div>
+                    <h4>{% trans 'Multiple Courses' %}</h4>
+                    <p>Sed ut persiciatis omnis natus voluptate accsantie doloreue laudantium</p>
+                    <a href="about.html" class="details-btn"><i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-three-item wow fadeInUp delay-0-6s">
+                    <div class="icon">
+                        <img src="{% static 'images/features/icon8.png' %}" alt="Icon">
+                    </div>
+                    <h4>{% trans 'Hire Quickly' %}</h4>
+                    <p>Sed ut persiciatis omnis natus voluptate accsantie doloreue laudantium</p>
+                    <a href="about.html" class="details-btn"><i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-three-item wow fadeInUp delay-0-8s">
+                    <div class="icon">
+                        <img src="{% static 'images/features/icon9.png' %}" alt="Icon">
+                    </div>
+                    <h4>{% trans 'Video Tutorials' %}</h4>
+                    <p>Sed ut persiciatis omnis natus voluptate accsantie doloreue laudantium</p>
+                    <a href="about.html" class="details-btn"><i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Features Section End -->
+
+
+<!-- Team Section Start -->
+<section class="team-setion-two bg-lighter rel z-1 pt-120 rpt-90 pb-70 rpb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title text-center mb-55">
+                    <span class="sub-title-two">{% trans 'Meet Our Team' %}</span>
+                    <h2>{% trans 'We’ve Thousands Of Experience Team Members' %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-2s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team1.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>David S. Wickman</h4>
+                        <span>{% trans 'Wed Designer' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-4s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team2.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>Walter J. Drake</h4>
+                        <span>{% trans 'Wed Developer' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-6s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team3.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>Steven J. Voorhees</h4>
+                        <span>{% trans 'Wed Designer' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-8s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team4.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>Herman C. Kennedy</h4>
+                        <span>{% trans 'Wed Designer' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-2s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team5.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>Nathan A. Browning</h4>
+                        <span>{% trans 'Business Consultant' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-4s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team6.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>Carmine M. Allen</h4>
+                        <span>{% trans 'Senior Manager' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-6s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team7.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>Rubin R. Nelligan</h4>
+                        <span>{% trans 'Wed Designer' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team-member-two wow fadeInUp delay-0-8s">
+                    <div class="image">
+                        <img src="{% static 'images/teams/team8.jpg' %}" alt="Team Member">
+                        <div class="social-style-two">
+                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-description">
+                        <h4>Jimmy T. Briley</h4>
+                        <span>{% trans 'Programmer' %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+
+
+<!-- Advertise Area Start -->
+<section class="advertise-area pt-130 rpt-100 pb-90 rpb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="advertise-item wow fadeInUp delay-0-2s">
+                    <div class="content">
+                        <h4>{% trans 'Become An Instructor?' %}</h4>
+                        <p>Sit amet consectetur adipiscing sed eiusmod tempore dolore magna suspendisse</p>
+                        <a href="contact.html" class="theme-btn">Join with us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="image">
+                        <img src="{% static 'images/advertise/advertise1.png' %}" alt="Advertise">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="advertise-item bg-two wow fadeInUp delay-0-4s">
+                    <div class="content">
+                        <h4>{% trans 'Get Online Courses' %}</h4>
+                        <p>Amet consectetur adipiscing sed eius tempore dolore magna suspens</p>
+                        <a href="contact.html" class="theme-btn style-two">Join with us <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="image">
+                        <img src="{% static 'images/advertise/advertise2.png' %}" alt="Advertise">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Advertise Area End -->
+
+
+<!-- Why Learn Start -->
+<section class="why-learn-area pb-120 rpb-100">
+    <div class="container">
+        <div class="row align-items-center large-gap wow fadeInLeft delay-0-2s">
+            <div class="col-lg-6">
+                <div class="why-learn-content rmb-35">
+                    <div class="section-title mb-30">
+                        <span class="sub-title-two">{% trans 'Why Learn Us' %}</span>
+                        <h2>{% trans 'Exclusive Online Course Provide Categories' %}</h2>
+                    </div>
+                    <p>{% trans 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue and equal blame belongs' %}</p>
+                    <div class="why-learn-feature pt-30">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-three-item">
+                                    <div class="icon">
+                                        <img src="{% static 'images/features/icon10.png' %}" alt="Icon">
+                                    </div>
+                                    <h4>{% trans 'Expert Advisors' %}</h4>
+                                    <p>Accutium doloremque lauda totarem aperiam eaque quaeo inventore veritatis quase
+                                    </p>
+                                    <a href="about.html" class="read-more color-two">{% trans 'Read more' %} <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-three-item">
+                                    <div class="icon">
+                                        <img src="{% static 'images/features/icon11.png' %}" alt="Icon">
+                                    </div>
+                                    <h4>{% trans 'Popular Courses' %}</h4>
+                                    <p>Quis autem vel eureh enderit voluptate velit esse nihlestiae consuatur veillum
+                                        dolore</p>
+                                    <a href="about.html" class="read-more color-two">{% trans 'Read more' %}<i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="why-learn-image wow fadeInRight delay-0-2s">
+                    <img src="{% static 'images/about/why-learn.jpg' %}" alt="Why Learn">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Learn End -->
+
+
+<!-- Testimonials Section Start -->
+<section class="testimonials-section-two my-80 rel z-1 wow fadeInUp delay-0-2s">
+    <div class="container">
+        <div class="testimonial-two-wrap">
+            <div class="testimonial-item-two">
+                <div class="testimonial-author-two">
+                    <img src="{% static 'images/testimonials/testimonial-two2.jpg' %}" alt="Author">
+                </div>
+                <div class="testimonial-content-two">
+                    <div class="designation">
+                        <h3>Justin C. Swanson</h3>
+                        <span>{% trans 'Business Manager' %}</span>
+                    </div>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq udantium
+                        totam rem aperiam eaque quae abillo inventore veritatis et quasi architecto beatae</p>
+                    <div class="ratting">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item-two">
+                <div class="testimonial-author-two">
+                    <img src="{% static 'images/testimonials/testimonial-two1.jpg' %}" alt="Author">
+                </div>
+                <div class="testimonial-content-two">
+                    <div class="designation">
+                        <h3>Daniel E. Yager</h3>
+                        <span>{% trans 'Business Manager' %}</span>
+                    </div>
+                    <p>Aperiam eaque quae abillo inventore veritatis et quasi architecto beatae Sed ut perspiciatis unde
+                        omnis iste natus error sit voluptatem accusantium doloremq udantium totam rem</p>
+                    <div class="ratting">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item-two">
+                <div class="testimonial-author-two">
+                    <img src="{% static 'images/testimonials/testimonial-two3.jpg' %}" alt="Author">
+                </div>
+                <div class="testimonial-content-two">
+                    <div class="designation">
+                        <h3>Stewart R. Platt</h3>
+                        <span>{% trans 'Business Manager' %}</span>
+                    </div>
+                    <p>Voluptatem accusantium doloremq udantium totam rem Sed ut perspiciatis unde omnis iste natus
+                        error sit aperiam eaque quae abillo inventore veritatis et quasi architecto beatae</p>
+                    <div class="ratting">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonials Section End -->
+
+
+<!-- Partner Section Start -->
+<section class="partner-section rel z-1 pt-120 rpt-90 pb-75 rpb-55">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="categories-content mb-50 wow fadeInRight delay-0-2s">
+                    <div class="section-title mb-25">
+                        <span class="sub-title-two">{% trans 'Global Partners' %}</span>
+                        <h2>{% trans 'We’ve More Then 235+ Global Partners' %}</h2>
+                    </div>
+                    <a href="about.html" class="read-more mt-5">{% trans 'View more partners' %}<i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="logo-inner style-two wow fadeInLeft delay-0-2s">
+                    <div class="logo-item">
+                        <a href="about.html"><img src="{% static 'images/client-logos/client-logo-two1.png' %}"
+                                alt="Client Logo"></a>
+                    </div>
+                    <div class="logo-item">
+                        <a href="about.html"><img src="{% static 'images/client-logos/client-logo-two2.png' %}"
+                                alt="Client Logo"></a>
+                    </div>
+                    <div class="logo-item">
+                        <a href="about.html"><img src="{% static 'images/client-logos/client-logo-two3.png' %}"
+                                alt="Client Logo"></a>
+                    </div>
+                    <div class="logo-item">
+                        <a href="about.html"><img src="{% static 'images/client-logos/client-logo-two4.png' %}"
+                                alt="Client Logo"></a>
+                    </div>
+                    <div class="logo-item">
+                        <a href="about.html"><img src="{% static 'images/client-logos/client-logo-two5.png' %}"
+                                alt="Client Logo"></a>
+                    </div>
+                    <div class="logo-item">
+                        <a href="about.html"><img src="{% static 'images/client-logos/client-logo-two6.png' %}"
+                                alt="Client Logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Partner Section End -->
+{% endblock %}

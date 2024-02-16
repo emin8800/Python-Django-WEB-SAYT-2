@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contend %}
+{% load i18n %}
+
+
+
+<!-- Page Banner Start -->
+<section class="page-banner-area rel z-1 text-white text-center"
+    style="background-image: url(static/images/banner.jpg);">
+    <div class="container">
+        <div class="banner-inner rpt-10">
+            <h2 class="page-title wow fadeInUp delay-0-2s">FAQ's</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">home</a></li>
+                    <li class="breadcrumb-item active">FAQ's</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+    <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+</section>
+<!-- Page Banner End -->
+
+
+<!-- FAQ's Section Start -->
+<section class="faqs-section pt-120 rpt-90 pb-115 rpb-85 wow fadeInUp delay-0-2s">
+    <div class="container">
+        <div class="section-title mb-35">
+            <span class="sub-title-two">Have Any Questions?</span>
+           
+        </div>
+  
+        <div class="tab-content faq-accordion">
+            <div class="tab-pane fade show active" id="tabContent1">
+                <div class="row">
+                    {% for faq in faqs %}
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <a class="collapsed card-header" href="#" data-toggle="collapse" data-target="#collapse{{ forloop.counter }}"
+                                aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">{{ faq.question|safe }}<span class="toggle-btn"></span>
+                            </a>
+                            <div id="collapse{{ forloop.counter }}" class="collapse" data-parent="#tabContent1">
+                                <div class="card-body">
+                                    <p>{{ faq.answer|safe }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                   
+                    </div>
+                    {% endfor %}
+                 
+                </div>
+            </div>
+     
+         
+        </div>
+    </div>
+</section>
+<!-- FAQ's Section End -->
+
+
+<!-- Video Section Start -->
+<div class="video-section wow fadeInUp delay-0-2s">
+    <div class="container">
+        <div class="video-inner overlay">
+            <img src="{% static 'images/video/video-section-bg.jpg' %}" alt="Video">
+            <a href="https://www.youtube.com/watch?v=5iCXKV5ybp8" class="mfp-iframe video-play"><i
+                    class="fas fa-play"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Video Section End -->
+
+
+<!-- FAQs Form Area Start -->
+<!-- <section class="faq-form-area rel z-1 pt-120 rpt-90 pb-125 rpb-95">
+    <div class="container">
+        <div class="row large-gap align-items-center justify-content-between">
+            <div class="col-lg-5">
+                <div class="faqs-form-content rmb-65 wow fadeInRight delay-0-2s">
+                    <div class="section-title mb-25">
+                        <span class="sub-title-two">Get in Touch ?</span>
+                        <h2>Have Any Question On Minds ?</h2>
+                    </div>
+                    <p>On the other hand we denounce with righteou indigntion and dislike men who are so beguiled and
+                        drem the charms of pleasure of the moment so blinded by desire</p>
+                    <div class="faq-contact-info pt-20">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="content">
+                            <h6>Phone Number</h6>
+                            <a href="callto:+012(345)6789">+012(345) 67 89</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
+</section> -->
+<!-- FAQs Form Area End -->
+{% endblock %}

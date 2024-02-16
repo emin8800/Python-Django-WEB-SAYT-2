@@ -1,0 +1,343 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static custom_tags %}
+{% block title%}{{ title }}{% endblock %}
+{% block contend %}
+
+        <!-- Page Banner Start -->
+        <section class="page-banner-area rel z-1 text-white text-center" style="background-image: url(static/images/banner.jpg);">
+            <div class="container">
+                <div class="banner-inner rpt-10">
+                    <h2 class="page-title wow fadeInUp delay-0-2s">Product Details</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item active">Product Details</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+            <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+        </section>
+        <!-- Page Banner End -->
+
+       
+        <!-- Product Details Start -->
+        <section class="product-details pt-130 rpt-100">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6">
+                        <div class="product-details-images rmb-55 wow fadeInLeft delay-0-2s">
+                            <div class="tab-content preview-images">
+                                <div class="tab-pane fade preview-item active show" id="preview1">
+                                    <img src="{% static 'images/shop/preview1.png' %}" alt="Perview">
+                                </div>
+                                <div class="tab-pane fade preview-item" id="preview2">
+                                    <img src="{% static 'images/shop/preview1.png' %}" alt="Perview">
+                                </div>
+                                <div class="tab-pane fade preview-item" id="preview3">
+                                    <img src="{% static 'images/shop/preview1.png' %}" alt="Perview">
+                                </div>
+                            </div>
+                            <div class="nav thumb-images">
+                                <a href="#preview1" data-toggle="tab" class="thumb-item active show">
+                                    <img src="{% static 'images/shop/thumb1.png' %}" alt="Thumb">
+                                </a>
+                                <a href="#preview2" data-toggle="tab" class="thumb-item">
+                                    <img src="{% static 'images/shop/thumb2.png' %}" alt="Thumb">
+                                </a>
+                                <a href="#preview3" data-toggle="tab" class="thumb-item">
+                                    <img src="{% static 'images/shop/thumb3.png' %}" alt="Thumb">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="product-details-content wow fadeInRight delay-0-2s">
+                            <h2>PSD Book Mockup</h2>
+                            <div class="author">
+                                <img src="{% static 'images/shop/author.jpg' %}" alt="author">
+                                <h6>Somala D. Silva</h6>
+                            </div>
+                            <div class="ratting-price mb-20">
+                                <div class="ratting">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="price">59.58</span>
+                            </div>
+                            <p>Sed ut perspiciatis unde omnis iste natus error silupt atem accusantium doloremque laudantium rem riams eaque quae abillo inventore quasi architecto beatae vitae dicta sunt explicabo. Nemo enim psaml uptatem quia voluptas sit aspernatur aut odit aut fugit sedes quia consequuntur magni dolores eos</p>
+                            <ul class="category-tags pt-10 pb-5">
+                                <li>
+                                    <b>Category</b>
+                                    <span>:</span>
+                                    <a href="#">Book</a>
+                                    <a href="#">Cover</a>
+                                    <a href="#">Course</a>
+                                </li>
+                                <li>
+                                    <b>Tags</b>
+                                    <span>:</span>
+                                    <a href="#">Learn</a>
+                                    <a href="#">Teach</a>
+                                    <a href="#">Videos</a>
+                                </li>
+                            </ul>
+                            <hr>
+                            <form action="#" class="add-to-cart mt-95 rmt-45">
+                                <input type="number" value="1" min="1" max="20" required>
+                                <button type="submit" class="theme-btn style-two">Add to Cart</button>
+                                <button class="love"><i class="far fa-heart"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs product-information-tab pt-55 mb-40">
+                    <li><a href="#details" data-toggle="tab" class="active show">Description</a></li>
+                    <li><a href="#information" data-toggle="tab">Information</a></li>
+                    <li><a href="#review" data-toggle="tab">Review (05)</a></li>
+                </ul>
+                <div class="tab-content wow fadeInUp delay-0-2s">
+                    <div class="tab-pane active show" id="details">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore verit atis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum</p>
+                        <form id="review-form" class="review-form p-50 mt-50 mb-30" name="review-form" action="#" method="post">
+                           <h4>Leave Your Reviews</h4>
+                           <div class="your-ratting">
+                               <h6>Your Ratting</h6>
+                               <div class="ratting">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                           </div>
+                            <div class="row mt-25">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" id="full-name" name="full-name" class="form-control" value="" placeholder="Full Name" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="email" id="shop-email" name="shop-email" class="form-control" value="" placeholder="Email Address" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" id="phone" name="phone" class="form-control" value="" placeholder="Phone Number" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write Comments" required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-0">
+                                        <button type="submit" class="theme-btn">send reviews <i class="fas fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="information">
+                        <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+                        <ul class="list-style-two mt-25 mb-25">
+                            <li>Strong lens for long distance surveillance.</li>
+                            <li>WIFI technology can view and view the Internet</li>
+                            <li>Auto Night Vision, Clear video can be seen in the dark at night</li>
+                            <li>Video recording system on a memory card</li>
+                            <li>You can watch back videos from the phone</li>
+                            <li>CCTV videos can be viewed live on your Laptop, Desktop, Smartphone or Tablet PC</li>
+                            <li>Direct monitoring of your favorite places from all parts of the world.</li>
+                            <li>Talking and listening to the two ends. (Same Like Mobile)</li>
+                            <li>Wide Angle and Long Length</li>
+                            <li>Smart zooming point</li>
+                            <li>HD quality video output.</li>
+                            <li>Smart Alarming System</li>
+                            <li>Power system 12 volts (without adapter)</li>
+                        </ul>
+                        <p>Now wherever you are, wherever you are, you can easily monitor your CCTV videos through your mobile, tab, laptop or PC. With the wireless camera, you can view the camera from your mobile or computer to the right-left 0 to 360-degree video. Cover the flower room with a camera.</p>
+                    </div>
+                    <div class="tab-pane" id="review">
+                        <ul class="comment-list">
+                            <li>
+                                <div class="comment-body">
+                                    <div class="author-thumb">
+                                        <img src="{% static 'images/blog/comment-author1.jpg' %}" alt="Image">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="name-date">
+                                            <h6>John F. Medina</h6>
+                                            <span class="comment-date">25 Feb 2022</span>
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p>Quis autem vel eum iure reprehenderit quin voluptate velit esseeso  quam nihile molestiae consequatur veillum quolore</p>
+                                        <a href="#" class="reply-link">Reply <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    </div>
+                                </div>
+                                <ul class="children">
+                                    <li>
+                                        <div class="comment-body">
+                                            <div class="author-thumb">
+                                                <img src="{% static 'images/blog/comment-author2.jpg' %}" alt="Image">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="name-date">
+                                                    <h6>Somalia D. Silva</h6>
+                                                    <span class="comment-date">25 Feb 2022</span>
+                                                    <div class="ratting">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p>Quis autem vel eum iure reprehenderit quin voluptate velit esseeso  quam nihile molestiae consequatur veillum quolore</p>
+                                                <a href="#" class="reply-link">Reply <i class="fas fa-long-arrow-alt-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="comment-body">
+                                    <div class="author-thumb">
+                                        <img src="{% static 'images/blog/comment-author3.jpg' %}" alt="Image">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="name-date">
+                                            <h6>Roger A. Torrence</h6>
+                                            <span class="comment-date">25 Feb 2022</span>
+                                            <div class="ratting">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p>Quis autem vel eum iure reprehenderit quin voluptate velit esseeso  quam nihile molestiae consequatur veillum quolore</p>
+                                        <a href="#" class="reply-link">Reply <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Product Details End -->
+        
+       
+        <!-- Popular Products Start -->
+        <section class="popular-product pt-90 rpt-60 pb-100 rpb-70">
+            <div class="container">
+                <div class="section-title text-center mb-45">
+                    <span class="sub-title-two">Popular Products</span>
+                    <h2>Visit Our Related Products</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="product-item wow fadeInUp delay-0-2s">
+                            <div class="product-image">
+                                <span class="off">25% off</span>
+                                <img src="{% static 'images/shop/product5.png' %}" alt="Products">
+                                <a href="contact.html" class="cart-btn">add to cart</a>
+                            </div>
+                            <div class="product-content">
+                                <h6><a href="product-details.html">PSD Book Mockup</a></h6>
+                                <span class="category">Medical Equipment</span>
+                                <div class="ratting">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="price"><del>73.56</del><span>53.56</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="product-item wow fadeInUp delay-0-4s">
+                            <div class="product-image">
+                                <img src="{% static 'images/shop/product6.png' %}" alt="Products">
+                                <a href="contact.html" class="cart-btn">add to cart</a>
+                            </div>
+                            <div class="product-content">
+                                <h6><a href="product-details.html">PSD Book Mockup</a></h6>
+                                <span class="category">Medical Equipment</span>
+                                <div class="ratting">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="price"><span>53.56</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="product-item wow fadeInUp delay-0-6s">
+                            <div class="product-image">
+                                <img src="{% static 'images/shop/product7.png' %}" alt="Products">
+                                <a href="contact.html" class="cart-btn">add to cart</a>
+                            </div>
+                            <div class="product-content">
+                                <h6><a href="product-details.html">PSD Book Mockup</a></h6>
+                                <span class="category">Medical Equipment</span>
+                                <div class="ratting">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="price"><span>53.56</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="product-item wow fadeInUp delay-0-8s">
+                            <div class="product-image">
+                                <span class="off">25% off</span>
+                                <img src="{% static 'images/shop/product8.png' %}" alt="Products">
+                                <a href="contact.html" class="cart-btn">add to cart</a>
+                            </div>
+                            <div class="product-content">
+                                <h6><a href="product-details.html">PSD Book Mockup</a></h6>
+                                <span class="category">Medical Equipment</span>
+                                <div class="ratting">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="price"><del>73.56</del><span>53.56</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Popular Products End -->
+
+
+{% endblock %}
+
+       

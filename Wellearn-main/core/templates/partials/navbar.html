@@ -1,0 +1,271 @@
+{% load static %}
+{% load i18n %}
+
+<body class="home-one">
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- main header -->
+        <header class="main-header">
+            <!-- Header-Top -->
+            <div class="header-top bg-light-blue text-white">
+                <div class="container-fluid">
+                    <div class="top-inner">
+                        <div class="top-left">
+                        <p><i class="far fa-clock"></i> <b>{% trans 'Working Hours' %}</b> :{% trans 'Manday - Friday' %}, 08am - 05pm</p>
+                        </div>
+                        <div class="top-right d-flex align-items-center">
+                            <div class="social-style-two">
+                                <a href="{{ settings.twitter }}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ settings.facebook }}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ settings.linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="{{ settings.youtube }}"><i class="fab fa-youtube"></i></a>
+                            </div>
+                            <ul class="top-menu">
+                                <li><a href="{% url 'about' %}">{% trans 'Setting & Privacy' %}</a></li>
+                                <li><a href="{% url 'faqs' %}" >{% trans 'Faqs' %}</a></li>
+                                <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header-Upper -->
+            <div class="header-upper">
+                <div class="container-fluid clearfix">
+
+                    <div class="header-inner d-flex align-items-center justify-content-between">
+                        <div class="logo-outer d-lg-flex align-items-center">
+                            <div class="logo"><a href="{% url 'home' %}"><img src="{{ settings.logo.url }}" alt="Logo" title="Logo"></a></div>
+                            
+                        </div>
+
+                        <form id="languageForm" action="{% url 'set_language' %}" method="post" style="display: block; margin-top: 0px; margin-left: -65px;">
+                            {% csrf_token %}
+                            <input type="hidden" name="next" value="{{ request.path }}">
+                            <select style="margin-top: -100pxpx;  margin-left: 1550px; width: 50px; height: 30px; border-radius: 15%; border: none; color: rgb(112, 58, 58); font-size: 18px;" name="language" onchange="this.form.submit()">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {{ LANGUAGE_CODE }}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                    {{ language.code | title }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </form>
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header">
+                                    <div class="mobile-logo bg-green br-10 p-15">
+                                        <a href="{% url 'home' %}">
+                                            <img src="{% static 'images/logos/logo.png' %}" alt="Logo" title="Logo">
+                                        </a>
+                                    </div>
+
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href="{% url 'home' %}">{% trans 'Home' %}</a>
+                                           
+                                        </li>
+                                        <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
+                                        <li><a href="{% url 'course-grid' %}">{% trans 'Courses' %}</a>
+                                            
+                                        </li>
+                                        <li class="dropdown"><a href="#">pages</a>
+                                            <ul>
+                                                <li><a href="{% url 'faqs' %}">{% trans 'FAQ`s' %}</a></li>
+                                                <li class="dropdown"><a href="#">{% trans 'shop' %}</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'shop' %}">{% trans 'product Page' %}</a></li>
+                                                        <li><a href="{% url 'product-details' %}">{%trans 'product details' %}</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">{% trans 'instructors' %}</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'instructors' %}">{% trans 'all instructors' %}</a></li>
+                                                        <li><a href="{% url 'become-instructor' %}">{% trans 'become instructor' %}</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'gallery' %}">{% trans 'gallery' %}</a></li>
+                                                <li><a href="{% url 'pricing' %}">{% trans 'pricing plan' %}</a></li>
+                                                <li><a href="{% url 'contact' %}">{% trans 'contact us' %}</a></li>
+                                                <li><a href="404.html">error Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'blog' %}">{% trans 'Blogs Page' %}</a></li>
+                                        <nbsp></nbsp>
+                                        {% if user.is_authenticated %}
+                                        <li><a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
+                                        {% else %}
+                                        <li class="dropdown" ><a href="#">{% trans 'Login' %}</a>
+                                            <ul>
+                                                <li><a href="{% url 'login' %}">{% trans 'Login' %}</a></li>
+                                                <li><a href="{% url 'register' %}">{% trans 'Register' %}</a></li>
+                                            </ul>
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+
+                        <!-- Menu Button -->
+                        <div class="menu-btn-sidebar d-flex align-items-center">
+                            
+                            <form method="get" action="{% url 'search' %}">
+                                <input type="text" name="query" placeholder="Search">
+                                <button><i class="fas fa-search"></i></button>
+                                
+                                <!-- <button><i class="fas fa-search"></i></button> -->
+                            </form>
+                            <button class="cart"><i class="fas fa-shopping-bag"></i></button>
+                            <button><i class="far fa-user-circle"></i></button>
+                            <!-- menu sidbar -->
+                            <div class="menu-sidebar">
+                                <button>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+        </header>
+        <!--Form Back Drop-->
+<div class="form-back-drop"></div>
+
+<!-- Hidden Sidebar -->
+<section class="hidden-bar">
+    <div class="inner-box text-center">
+        <div class="cross-icon"><span class="fa fa-times"></span></div>
+        <div class="title">
+            <h4>{% trans 'Subscribe' %}</h4>
+        </div>
+
+        <!--Appointment Form-->
+        <div class="appointment-form">
+            <form method="post">
+                {% csrf_token %}
+                <!-- <div class="form-group">
+                    <input type="text" name="text" id="nameinput" value="" placeholder="Name" required>
+                </div> -->
+                <div class="form-group">
+                    <input type="email" id="emailinput" placeholder="Email Address" required>
+                </div>
+                <!-- <div class="form-group">
+                    <input type="text" name="text" placeholder="Message" id="messageinput" rows="5">
+                </div> -->
+                <div class="form-group">
+                    <button type="submit" id="emailbutton" class="theme-btn">{% trans 'Submit now' %}</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Social Icons-->
+        <div class="social-style-one">
+            <a href="{{ settings.twitter }}"><i class="fab fa-twitter"></i></a>
+            <a href="{{ settings.facebook }}"><i class="fab fa-facebook-f"></i></a>
+            <a href="{{ settings.linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+            <a href="{{ settings.youtube }}"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <script>
+        SubsciberLogic = {
+            emailManager(email) {
+                fetch('/api/subscriber/', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({
+                        'email': email,
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        subscribeModalLongTitle = document.getElementById('subscribeModalLongTitle');
+                        emailinput.value = '';
+                        alert('Successfully subcribed!')
+                    });
+            }
+        }
+    
+        emailbutton = document.getElementById('emailbutton')
+        emailinput = document.getElementById('emailinput')
+    
+        emailbutton.onclick = function (e) {
+            e.preventDefault();
+            console.log("emailinput.value", emailinput.value);
+            email = emailinput.value;
+            SubsciberLogic.emailManager(email);
+        }
+    
+    </script>
+
+
+    <!-- <script>
+        SubscriberLogic = {
+            emailManager(name, email, message){
+                fetch('/api/subscriber/', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({
+                        'name': name,
+                        'message': message,
+                        'email': email
+                    })
+               })
+                    .then(response => response.json())
+                    .then(data => {
+                         subscribeModalLongTitle = document.getElementById('subscribeModalLongTitle');
+                         nameinput.value = '';
+                         messageinput.value = '';
+                         emailinput = '';
+                    });
+
+             }
+         }
+
+                emailbutton = document.getElementById('emailbutton')
+                emailinput = document.getElementById('emailinput')
+
+                emailbutton.onclick = function (e) {
+                    e.preventDefault();
+                    name = nameinput.value;
+                    email = emailinput.value;
+                    message = messageinput;
+                    SubscriberLogic.emailManager(name, email, message);
+
+                }
+
+
+    </script> -->
+</section>
+<!--End Hidden Sidebar -->

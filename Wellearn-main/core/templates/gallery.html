@@ -1,0 +1,156 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block contend %}
+
+       
+        <!-- Page Banner Start -->
+        <section class="page-banner-area rel z-1 text-white text-center" style="background-image: url(static/images/banner.jpg);">
+            <div class="container">
+                <div class="banner-inner rpt-10">
+                    <h2 class="page-title wow fadeInUp delay-0-2s">Gallery</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">home</a></li>
+                            <li class="breadcrumb-item active">Gallery</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+            <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+        </section>
+        <!-- Page Banner End -->
+        
+       
+        <!-- Gallery Section Start -->
+        <section class="gallery-section pt-120 rpt-90 pb-100 rpb-70">
+            <div class="container">
+               <div class="section-title text-center mb-35">
+                    <span class="sub-title-two">Project Gallery</span>
+                    <h2>Looks Inside About Gallery</h2>
+                </div>
+               <ul class="gallery-filter mb-50">
+                    <li data-filter="*" class="current">Show All</li>
+                    <li data-filter=".design">Design</li>
+                    <li data-filter=".dranding">Branding</li>
+                    <li data-filter=".business">Business</li>
+                    <li data-filter=".development">Development</li>
+                    <li data-filter=".photographgy">Photographgy</li>
+                </ul>
+                <div class="row gallery-active justify-content-center">
+                    <div class="col-lg-4 col-sm-6 item dranding development">
+                        <div class="gallery-item wow fadeInUp delay-0-2s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery1.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery1.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Business Cosulting</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item design business">
+                        <div class="gallery-item wow fadeInUp delay-0-4s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery2.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery2.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Marketing Analysis</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item dranding development">
+                        <div class="gallery-item wow fadeInUp delay-0-6s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery3.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery3.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Co-Working Consulting</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item design business">
+                        <div class="gallery-item wow fadeInUp delay-0-2s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery4.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery4.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Business Cosulting</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item business development">
+                        <div class="gallery-item wow fadeInUp delay-0-4s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery5.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery5.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Client Handling Skills</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item dranding photographgy">
+                        <div class="gallery-item wow fadeInUp delay-0-6s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery6.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery6.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Business Cosulting</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item design photographgy">
+                        <div class="gallery-item wow fadeInUp delay-0-2s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery7.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery7.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Life Style Course</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item business photographgy">
+                        <div class="gallery-item wow fadeInUp delay-0-4s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery8.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery8.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Business Cosulting</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item design development">
+                        <div class="gallery-item wow fadeInUp delay-0-6s">
+                            <div class="gallery-image">
+                                <img src="{% static 'images/gallery/gallery9.jpg' %}" alt="Gallery">
+                                <a href="{% static 'images/gallery/gallery9.jpg' %}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Online Traning Course</h4>
+                                <span>Online Course, Business</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section End -->
+        
+       
+{% endblock %}

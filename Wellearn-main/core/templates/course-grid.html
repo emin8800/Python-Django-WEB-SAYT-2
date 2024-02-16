@@ -1,0 +1,162 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static custom_tags %}
+{% block title%}{{ title }}{% endblock %}
+{% block contend %}
+       
+       
+        <!-- Page Banner Start -->
+        <section class="page-banner-area rel z-1 text-white text-center" style="background-image: url(static/images/banner.jpg);">
+            <div class="container">
+                <div class="banner-inner rpt-10">
+                    <h2 class="page-title wow fadeInUp delay-0-2s">{% trans 'Course List' %}</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'home' %}</a></li>
+                            <li class="breadcrumb-item active">{% trans 'Course List' %}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <img class="circle-one" src="{% static 'images/shapes/circle-one.png' %}" alt="Circle">
+            <img class="circle-two" src="{% static 'images/shapes/circle-two.png' %}" alt="Circle">
+        </section>
+        <!-- Page Banner End -->
+
+       
+        <!-- Course Left Start -->
+        <section class="course-left-area py-130 rpy-100">
+            <div class="container">
+                <div class="row large-gap">
+                    <div class="col-lg-4">
+                        <div class="course-sidebar rmb-55">
+                            <div class="widget widget-search wow fadeInUp delay-0-2s">
+                                <form action="#">
+                                    <input type="text" placeholder="Search Here" required>
+                                    <button type="submit" class="searchbutton fa fa-search"></button>
+                                </form>
+                            </div>
+                            <div class="widget widget-menu wow fadeInUp delay-0-4s">
+                                <h4 class="widget-title">{% trans 'Category' %}</h4>
+                                <ul> <li><a href="{% url 'course-grid' %}">{% trans 'Show All Catagory' %}</a> </li>
+                                    {% for coursecategory in coursecategory %}
+                                    
+                                    <li><a href="{% url 'course-grid' %}?coursecategory={{coursecategory.title}}" >{{coursecategory.title}}</a></li>
+                                    {% endfor %}
+                                  
+                                </ul>
+                            </div>
+                            <div class="widget widget-menu wow fadeInUp delay-0-2s">
+                                <h4 class="widget-title">{% trans 'Filter By Times' %}</h4>
+                                <ul>
+                                    <li><a href="{% url 'course-grid' %}">{% trans 'Show All Course Time' %}</a> </li>
+                                    {% for time in time %}
+                                    <li><a href="{% url 'course-grid' %}?time={{time.title}}" >{{time.title}}</a></li>
+                                    {% endfor %}
+                                   
+                                </ul>
+                            </div>
+                            <div class="widget widget-radio wow fadeInUp delay-0-2s">
+                                <h4 class="widget-title">{% trans 'Filter By Price' %}</h4>
+                                <form class="newsletter-form" action="#">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="all-course" name="filter" checked>
+                                      <label class="custom-control-label" for="all-course">{% trans 'Show All Courses' %}</label>
+                                    </div>
+                                    {% for pricecat in pricecat %}
+                                    <div class="custom-control custom-radio">
+                                       
+                                        
+                                    
+                                      <input type="radio" class="custom-control-input" id="premium-course" name="filter">
+                                      <label class="custom-control-label" for="premium-course"><a href="{% url 'course-grid' %}?pricecat={{pricecat.title}}" >{{pricecat.title}}</a> </label>
+                                    </div>
+                                    {% endfor %}
+                                    
+                                </form>
+                            </div>
+                            <div class="widget widget-radio wow fadeInUp delay-0-2s">
+                                <h4 class="widget-title">Filter By Level</h4>
+                                <form class="newsletter-form" action="#">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="all-level" name="filter" checked>
+                                      <label class="custom-control-label" for="all-level"> <a href="{% url 'course-grid' %}">  Show All Level </a> </label>
+                                    </div>
+                                    {% for level in level %}
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input" id="beginner-level" name="filter">
+                                      <label class="custom-control-label" for="beginner-level"><a href="{% url 'course-grid' %}?level={{level.title}}" >{{level.title}}</a></label>
+                                    </div>
+                                    {% endfor %}
+                                </form>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="course-grids">
+                           <div class="shop-shorter mb-40 wow fadeInUp delay-0-2s">
+                                <div class="sort-text">
+                                    {% trans 'Showing <b>4</b> Courses For 15 Course' %}
+                                </div>
+                                <ul class="grid-list">
+                                    <li><a href="#"><i class="fas fa-list-ul"></i></a></li>
+                                    <li><a href="#" class="active"><i class="fas fa-border-all"></i></a></li>
+                                </ul>
+                                <div class="products-dropdown">
+                                    <select>
+                                        <option value="default">Filter by</option>
+                                        <option value="new" selected="">Latest</option>
+                                        <option value="old">Oldest</option>
+                                        <option value="hight-to-low">High To Low</option>
+                                        <option value="low-to-high">Low To High</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                {% for i in course %}
+                                <div class="col-md-6">
+                                    <div class="coach-item wow fadeInUp delay-0-2s">
+                                        <div class="coach-image">
+                                            <a href="" class="category">{{ i.coursecategory }}</a>
+                                            <img src="{{ i.image.url }}" alt="Coach">
+                                        </div>
+                                        <div class="coach-content">
+                                            <span class="label">{{ i.title }}</span>
+                                            <h4><a href="{% url 'course_details' i.slug %}" target="_blank">{{ i.title_two }}</a></h4>
+                                            <div class="ratting-price">
+                                                <div class="ratting">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <span>(3k)</span>
+                                                </div>
+                                                <span class="price">{{ i.Q }}</span>
+                                            </div>
+                                            <ul class="coach-footer">
+                                                <li><i class="far fa-file-alt"></i><span>12 Lessions</span></li>
+                                                <li><i class="far fa-user"></i><span>seats</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <form action="" method="post">
+                                {% csrf_token%}
+                                <input type="hidden" name="more-course" value="{{count}}">
+                                <button type="submit" class="news-btn" style="margin-left: 40%;">load more</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Course Left End -->
+       
+       
+{% endblock %}
